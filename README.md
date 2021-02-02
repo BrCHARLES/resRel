@@ -1,3 +1,13 @@
+# Pour modifier le nom de l'application : 
+Ne pas oublier de modifier dans le .env => son nom.
+APP_NAME="Ressources Relationnelles"
+
+Pour l'utiliser dans les vues :
+Vues : layout :     <title>  @yield('title', env('APP_NAME'))</title>
+@section('title', 'Ton titre' . 'enc('APP_NAME')
+
+_______________________________________________________________
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
