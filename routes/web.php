@@ -14,6 +14,11 @@ Route::get('/a-propos', function(){
 Route::get('/contact', function(){
     return view('statics.contact');
 });
-
+Route::get('/faq', function(){
+    return view('statics.faq');
+});
+Route::get('/aide', function(){
+    return view('statics.aide');
+});
 // Routes nommées : 
 // liens dynamiques

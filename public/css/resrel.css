@@ -6,14 +6,14 @@
 	--themecolor: #0474c4;
 }
 .bg-color,
-.bg-color #header-wrap { background-color: #0474c4 !important; }
-
+.bg-color #header-wrap { background-color: #032740 !important; }
+.bg-light  { background-color: #e4eef5 !important; }
 .ls-1 { letter-spacing: -1px !important; }
 
 /* Headers
 ---------------------------------------------------------------------------- */
 .dark .top-links-item > a {
-	color: #EEE;
+	color: rgb(255, 255, 255);
 	font-weight: 400;
 	text-transform: none;
 }
@@ -37,16 +37,16 @@
 
 .navbar-expand-lg .navbar-nav .nav-item:first-child .nav-link { margin-left: 0; }
 
-.navbar-expand-lg .navbar-nav .nav-item:not(.active) .nav-link { color: #444; }
+.navbar-expand-lg .navbar-nav .nav-item:not(.active) .nav-link { color: #000; }
 
 .navbar-expand-lg .navbar-nav .nav-item:hover .nav-link { color: var(--themecolor) }
 
-.menu-link {
+.menu-link { 
 	text-transform: none;
 	font-weight: 400;
 	letter-spacing: 0;
-	font-size: 16px;
-	color: #333 !important;
+	font-size: 14px;
+	color: #000 !important;
 }
 
 .sub-menu-container .menu-link {
@@ -56,9 +56,9 @@
 
 /* Text Rotater
 ---------------------------------------------------------------------------- */
-.text-rotater { font-size: 38px; letter-spacing: -1px; }
-
-.text-rotater span { text-decoration: underline; }
+.text-rotater { 
+	font-size: 40px; 
+ } 
 
 /* Hero Widget
 ---------------------------------------------------------------------------- */
@@ -133,8 +133,7 @@
 
 /* Badge
 ---------------------------------------------------------------------------- */
-.badge {
-	font-size: ;
+.badge { 
 	padding: 8px 12px;
 	border: 0;
 	border-radius: 3px;
@@ -165,13 +164,13 @@
 
 .heading-block h3 {
 	font-weight: 700;
+	color:#000;
 	text-transform: none;
 	letter-spacing: 0;
 }
 
 .heading-block h3 + span {
-	font-size: 17px;
-	opacity: .9;
+	font-size: 17px; 
 }
 
 /* Border Form Design
@@ -207,8 +206,7 @@
 @media (min-width: 992px) {
 
 	.heading-block h3 {
-		font-size: 42px;
-		letter-spacing: -2px;
+		font-size: 42px; 
 	}
 
 	.course-card .card-title {

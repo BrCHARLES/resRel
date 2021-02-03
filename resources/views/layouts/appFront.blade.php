@@ -7,11 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>
-        {{ config('app.name', 'Laravel') }}</title>
-  
+    <title>  @yield('title', env('APP_NAME'))</title>
+    <link rel="icon" href="{{ asset('ressources-relationnelles.ico') }}" />
 	<!-- Styles============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Istok+Web:400,700&display=swap" rel="stylesheet" type="text/css" />
+	 
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
@@ -21,30 +20,28 @@
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/fonts.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/resrel.css') }}" type="text/css" /> 
-   
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Roboto">
    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
+
 <body class="stretched">
-    <div id="wrapper" class="clearfix">
-        @include('incs.headerFront')    
+	<!-- Document Wrapper ============================================= -->
+	<div id="wrapper" class="clearfix">
+
         @yield('content')
-        @include('incs.footerFront')
-            
-    </div><!-- #wrapper end -->
+        
+	</div><!-- #wrapper end -->
 
 	<!-- Go To Top ============================================= -->
-    <div id="gotoTop" class="icon-angle-up"></div>
-    
+	<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- JavaScripts--> 
-	 
+	<!-- JavaScripts ============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
 
-	<script src="{{ asset('js/jquery.js') }}"></script>
-	<script src="{{ asset('js/plugins.min.js') }}"></script> 
-	<script src="{{ asset('js/functions.js') }}"></script>
-	
-    @livewireScripts
+	<!-- Footer Scripts ============================================= -->
+	<script src="js/functions.js"></script>
 
 </body>
 </html>

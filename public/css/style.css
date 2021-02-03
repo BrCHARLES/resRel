@@ -85,10 +85,8 @@
 	background: url("/images/bck-min.jpg");
 	position: relative;
 	z-index: 1;
-	padding: 0;
-	margin-bottom: 50px;
-	background-attachment: fixed; 
-	background-size: cover;
+	padding: 0; 
+	background-attachment: fixed;  
 	min-height: 200px;
   }
 /* ----------------------------------------------------------------
@@ -149,8 +147,8 @@ dl, dt, dd, ol, ul, li {
 
 body {
 	line-height: 1.5;
-	color: #555;
-	font-family: 'Lato', sans-serif;
+	color: rgb(17, 17, 17);
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -183,12 +181,11 @@ h4,
 h5,
 h6 {
 	color: #444;
-	font-weight: 600;
-	line-height: 1.5;
+	font-weight: 500; 
 	margin: 0 0 30px 0;
 	font-family: 'Poppins', sans-serif;
 }
-
+ 
 h5,
 h6 { margin-bottom: 20px; }
 
@@ -248,7 +245,7 @@ table,
 fieldset,
 form { margin-bottom: 30px; }
 
-small { font-family: 'Lato', sans-serif; }
+small { font-family: 'Roboto', sans-serif; }
 
 
 @media (max-width: 1200px) {
@@ -395,7 +392,7 @@ span.middot {
 
 .nolineheight { line-height: 0 !important; }
 
-.font-body { font-family: 'Lato', sans-serif; }
+.font-body { font-family: 'Roboto', sans-serif; }
 
 .font-primary { font-family: 'Poppins', sans-serif; }
 
@@ -2923,11 +2920,14 @@ html[xmlns] .slider-wrap {
 	margin-top: 0;
 	pointer-events: auto;
 	z-index: 499;
+	background-color: #032740;
 }
 
 .top-links.on-click .top-links-sub-menu,
 .top-links.on-click .top-links-section {
 	display: none;
+	
+
 }
 
 .top-links-sub-menu .top-links-sub-menu {
@@ -2998,7 +2998,7 @@ html[xmlns] .slider-wrap {
 	list-style: none;
 }
 
-#top-social li { border-left: 1px solid #EEE; }
+#top-social li { border-left: 2px solid rgb(255, 255, 255); }
 
 #top-social li:first-child { border-left: 0 !important; }
 
@@ -3008,7 +3008,7 @@ html[xmlns] .slider-wrap {
 	width: auto;
 	overflow: hidden;
 	font-weight: bold;
-	color: #666;
+	color: rgb(255, 255, 255);
 }
 
 #top-social li a:hover {
@@ -3083,8 +3083,7 @@ html[xmlns] .slider-wrap {
 
 #header {
 	position: relative;
-	background-color: #FFF;
-	border-bottom: 1px solid #F5F5F5;
+	background-color: #FFF; 
 }
 
 #header-wrap {
@@ -3606,7 +3605,7 @@ body:not(.top-search-open) .top-search-parent #primary-menu-trigger {
 	font-weight: 400;
 	color: #666;
 	letter-spacing: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .sub-menu-container .menu-item:hover > .menu-link {
@@ -8100,7 +8099,7 @@ div.alignright {
 .wp-caption {
 	text-align: center;
 	margin: 10px 20px 13px 20px;
-	font-family: 'Lato', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Roboto', Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
 }
 
@@ -8818,7 +8817,7 @@ body:not(.device-touch) .button {
 }
 
 .button:hover {
-	background-color: #444;
+	background-color: rgb(160, 9, 9);
 	color: #FFF;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
@@ -8912,7 +8911,7 @@ body:not(.device-touch) .button {
 
 .button.button-border {
 	border: 2px solid #000000;
-	background-color: transparent;
+	background-color: #ffffff;
 	color: #333;
 	font-weight: 700;
 	text-shadow: none;
@@ -8925,7 +8924,7 @@ body:not(.device-touch) .button {
 .button.button-border.button-desc { line-height: 1; }
 
 .button.button-border:not(.button-fill):hover {
-	background-color: #444;
+	background-color: rgb(20, 99, 136);
 	color: #FFF;
 	border-color: transparent !important;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
@@ -9850,7 +9849,7 @@ body:not(.device-touch) .button.button-full strong {
 
 .fbox-center.fbox-italic p {
 	font-style: italic;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -12247,7 +12246,7 @@ body:not(.device-touch) .rounded-skill {
 
 .skills li .progress-percent .counter {
 	font-weight: 400;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .progress-percent::after, .progress-percent::before {
@@ -14537,7 +14536,7 @@ body:not(.device-touch) .tagcloud a {
 	font-size: 12px;
 	padding: 6px 0;
 	letter-spacing: 1px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .nav-tree ul ul a i.icon-angle-down { font-size: 12px; }

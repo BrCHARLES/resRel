@@ -2032,7 +2032,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   }
 
-  function transitionEndEmulator(duration) {
+  function transitionEndEmuRobotor(duration) {
     var _this = this;
 
     var called = false;
@@ -2048,7 +2048,7 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   function setTransitionEndSupport() {
-    $__default['default'].fn.emulateTransitionEnd = transitionEndEmulator;
+    $__default['default'].fn.emulateTransitionEnd = transitionEndEmuRobotor;
     $__default['default'].event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
   }
   /**
@@ -6885,7 +6885,7 @@ function( _i, name ) {
 
 function isArrayLike( obj ) {
 
-	// Support: real iOS 8.2 only (not reproducible in simulator)
+	// Support: real iOS 8.2 only (not reproducible in simuRobotor)
 	// `in` check used to prevent JIT error (gh-2145)
 	// hasOwn isn't used here due to false negatives
 	// regarding Nodelist length in IE
@@ -15484,11 +15484,11 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 // Fixes #9887
 function ajaxExtend( target, src ) {
 	var key, deep,
-		flatOptions = jQuery.ajaxSettings.flatOptions || {};
+		fRobotoptions = jQuery.ajaxSettings.fRobotoptions || {};
 
 	for ( key in src ) {
 		if ( src[ key ] !== undefined ) {
-			( flatOptions[ key ] ? target : ( deep || ( deep = {} ) ) )[ key ] = src[ key ];
+			( fRobotoptions[ key ] ? target : ( deep || ( deep = {} ) ) )[ key ] = src[ key ];
 		}
 	}
 	if ( deep ) {
@@ -15727,7 +15727,7 @@ jQuery.extend( {
 		// you can add your own custom options here if
 		// and when you create one that shouldn't be
 		// deep extended (see ajaxExtend)
-		flatOptions: {
+		fRobotoptions: {
 			url: true,
 			context: true
 		}
@@ -17244,7 +17244,7 @@ jQuery.noConflict = function( deep ) {
 
 // Expose jQuery and $ identifiers, even in AMD
 // (#7102#comment:10, https://github.com/jquery/jquery/pull/557)
-// and CommonJS for browser emulators (#13566)
+// and CommonJS for browser emuRobotors (#13566)
 if ( typeof noGlobal === "undefined" ) {
 	window.jQuery = window.$ = jQuery;
 }
@@ -17750,20 +17750,20 @@ return jQuery;
    *
    * @private
    * @param {Array} [array] The array to iterate over.
-   * @param {Function} setter The function to set `accumulator` values.
+   * @param {Function} setter The function to set `accumuRobotor` values.
    * @param {Function} iteratee The iteratee to transform keys.
-   * @param {Object} accumulator The initial aggregated object.
-   * @returns {Function} Returns `accumulator`.
+   * @param {Object} accumuRobotor The initial aggregated object.
+   * @returns {Function} Returns `accumuRobotor`.
    */
-  function arrayAggregator(array, setter, iteratee, accumulator) {
+  function arrayAggregator(array, setter, iteratee, accumuRobotor) {
     var index = -1,
         length = array == null ? 0 : array.length;
 
     while (++index < length) {
       var value = array[index];
-      setter(accumulator, value, iteratee(value), array);
+      setter(accumuRobotor, value, iteratee(value), array);
     }
-    return accumulator;
+    return accumuRobotor;
   }
 
   /**
@@ -17934,22 +17934,22 @@ return jQuery;
    * @private
    * @param {Array} [array] The array to iterate over.
    * @param {Function} iteratee The function invoked per iteration.
-   * @param {*} [accumulator] The initial value.
+   * @param {*} [accumuRobotor] The initial value.
    * @param {boolean} [initAccum] Specify using the first element of `array` as
    *  the initial value.
    * @returns {*} Returns the accumulated value.
    */
-  function arrayReduce(array, iteratee, accumulator, initAccum) {
+  function arrayReduce(array, iteratee, accumuRobotor, initAccum) {
     var index = -1,
         length = array == null ? 0 : array.length;
 
     if (initAccum && length) {
-      accumulator = array[++index];
+      accumuRobotor = array[++index];
     }
     while (++index < length) {
-      accumulator = iteratee(accumulator, array[index], index, array);
+      accumuRobotor = iteratee(accumuRobotor, array[index], index, array);
     }
-    return accumulator;
+    return accumuRobotor;
   }
 
   /**
@@ -17959,20 +17959,20 @@ return jQuery;
    * @private
    * @param {Array} [array] The array to iterate over.
    * @param {Function} iteratee The function invoked per iteration.
-   * @param {*} [accumulator] The initial value.
+   * @param {*} [accumuRobotor] The initial value.
    * @param {boolean} [initAccum] Specify using the last element of `array` as
    *  the initial value.
    * @returns {*} Returns the accumulated value.
    */
-  function arrayReduceRight(array, iteratee, accumulator, initAccum) {
+  function arrayReduceRight(array, iteratee, accumuRobotor, initAccum) {
     var length = array == null ? 0 : array.length;
     if (initAccum && length) {
-      accumulator = array[--length];
+      accumuRobotor = array[--length];
     }
     while (length--) {
-      accumulator = iteratee(accumulator, array[length], length, array);
+      accumuRobotor = iteratee(accumuRobotor, array[length], length, array);
     }
-    return accumulator;
+    return accumuRobotor;
   }
 
   /**
@@ -18168,19 +18168,19 @@ return jQuery;
    * @private
    * @param {Array|Object} collection The collection to iterate over.
    * @param {Function} iteratee The function invoked per iteration.
-   * @param {*} accumulator The initial value.
+   * @param {*} accumuRobotor The initial value.
    * @param {boolean} initAccum Specify using the first or last element of
    *  `collection` as the initial value.
    * @param {Function} eachFunc The function to iterate over `collection`.
    * @returns {*} Returns the accumulated value.
    */
-  function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
+  function baseReduce(collection, iteratee, accumuRobotor, initAccum, eachFunc) {
     eachFunc(collection, function(value, index, collection) {
-      accumulator = initAccum
+      accumuRobotor = initAccum
         ? (initAccum = false, value)
-        : iteratee(accumulator, value, index, collection);
+        : iteratee(accumuRobotor, value, index, collection);
     });
-    return accumulator;
+    return accumuRobotor;
   }
 
   /**
@@ -19762,21 +19762,21 @@ return jQuery;
     }
 
     /**
-     * Aggregates elements of `collection` on `accumulator` with keys transformed
+     * Aggregates elements of `collection` on `accumuRobotor` with keys transformed
      * by `iteratee` and values set by `setter`.
      *
      * @private
      * @param {Array|Object} collection The collection to iterate over.
-     * @param {Function} setter The function to set `accumulator` values.
+     * @param {Function} setter The function to set `accumuRobotor` values.
      * @param {Function} iteratee The iteratee to transform keys.
-     * @param {Object} accumulator The initial aggregated object.
-     * @returns {Function} Returns `accumulator`.
+     * @param {Object} accumuRobotor The initial aggregated object.
+     * @returns {Function} Returns `accumuRobotor`.
      */
-    function baseAggregator(collection, setter, iteratee, accumulator) {
+    function baseAggregator(collection, setter, iteratee, accumuRobotor) {
       baseEach(collection, function(value, key, collection) {
-        setter(accumulator, value, iteratee(value), collection);
+        setter(accumuRobotor, value, iteratee(value), collection);
       });
-      return accumulator;
+      return accumuRobotor;
     }
 
     /**
@@ -20455,16 +20455,16 @@ return jQuery;
      *
      * @private
      * @param {Object} object The object to iterate over.
-     * @param {Function} setter The function to set `accumulator` values.
+     * @param {Function} setter The function to set `accumuRobotor` values.
      * @param {Function} iteratee The iteratee to transform values.
-     * @param {Object} accumulator The initial inverted object.
-     * @returns {Function} Returns `accumulator`.
+     * @param {Object} accumuRobotor The initial inverted object.
+     * @returns {Function} Returns `accumuRobotor`.
      */
-    function baseInverter(object, setter, iteratee, accumulator) {
+    function baseInverter(object, setter, iteratee, accumuRobotor) {
       baseForOwn(object, function(value, key, object) {
-        setter(accumulator, iteratee(value), key, object);
+        setter(accumuRobotor, iteratee(value), key, object);
       });
-      return accumulator;
+      return accumuRobotor;
     }
 
     /**
@@ -22098,16 +22098,16 @@ return jQuery;
      * Creates a function like `_.groupBy`.
      *
      * @private
-     * @param {Function} setter The function to set accumulator values.
-     * @param {Function} [initializer] The accumulator object initializer.
+     * @param {Function} setter The function to set accumuRobotor values.
+     * @param {Function} [initializer] The accumuRobotor object initializer.
      * @returns {Function} Returns the new aggregator function.
      */
     function createAggregator(setter, initializer) {
       return function(collection, iteratee) {
         var func = isArray(collection) ? arrayAggregator : baseAggregator,
-            accumulator = initializer ? initializer() : {};
+            accumuRobotor = initializer ? initializer() : {};
 
-        return func(collection, setter, getIteratee(iteratee, 2), accumulator);
+        return func(collection, setter, getIteratee(iteratee, 2), accumuRobotor);
       };
     }
 
@@ -22486,7 +22486,7 @@ return jQuery;
      * Creates a function like `_.invertBy`.
      *
      * @private
-     * @param {Function} setter The function to set accumulator values.
+     * @param {Function} setter The function to set accumuRobotor values.
      * @param {Function} toIteratee The function to resolve iteratees.
      * @returns {Function} Returns the new inverter function.
      */
@@ -26933,10 +26933,10 @@ return jQuery;
     /**
      * Reduces `collection` to a value which is the accumulated result of running
      * each element in `collection` thru `iteratee`, where each successive
-     * invocation is supplied the return value of the previous. If `accumulator`
+     * invocation is supplied the return value of the previous. If `accumuRobotor`
      * is not given, the first element of `collection` is used as the initial
      * value. The iteratee is invoked with four arguments:
-     * (accumulator, value, index|key, collection).
+     * (accumuRobotor, value, index|key, collection).
      *
      * Many lodash methods are guarded to work as iteratees for methods like
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
@@ -26951,7 +26951,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [iteratee=_.identity] The function invoked per iteration.
-     * @param {*} [accumulator] The initial value.
+     * @param {*} [accumuRobotor] The initial value.
      * @returns {*} Returns the accumulated value.
      * @see _.reduceRight
      * @example
@@ -26967,11 +26967,11 @@ return jQuery;
      * }, {});
      * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
      */
-    function reduce(collection, iteratee, accumulator) {
+    function reduce(collection, iteratee, accumuRobotor) {
       var func = isArray(collection) ? arrayReduce : baseReduce,
           initAccum = arguments.length < 3;
 
-      return func(collection, getIteratee(iteratee, 4), accumulator, initAccum, baseEach);
+      return func(collection, getIteratee(iteratee, 4), accumuRobotor, initAccum, baseEach);
     }
 
     /**
@@ -26984,7 +26984,7 @@ return jQuery;
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [iteratee=_.identity] The function invoked per iteration.
-     * @param {*} [accumulator] The initial value.
+     * @param {*} [accumuRobotor] The initial value.
      * @returns {*} Returns the accumulated value.
      * @see _.reduce
      * @example
@@ -26996,11 +26996,11 @@ return jQuery;
      * }, []);
      * // => [4, 5, 2, 3, 0, 1]
      */
-    function reduceRight(collection, iteratee, accumulator) {
+    function reduceRight(collection, iteratee, accumuRobotor) {
       var func = isArray(collection) ? arrayReduceRight : baseReduce,
           initAccum = arguments.length < 3;
 
-      return func(collection, getIteratee(iteratee, 4), accumulator, initAccum, baseEachRight);
+      return func(collection, getIteratee(iteratee, 4), accumuRobotor, initAccum, baseEachRight);
     }
 
     /**
@@ -31050,11 +31050,11 @@ return jQuery;
 
     /**
      * An alternative to `_.reduce`; this method transforms `object` to a new
-     * `accumulator` object which is the result of running each of its own
+     * `accumuRobotor` object which is the result of running each of its own
      * enumerable string keyed properties thru `iteratee`, with each invocation
-     * potentially mutating the `accumulator` object. If `accumulator` is not
+     * potentially mutating the `accumuRobotor` object. If `accumuRobotor` is not
      * provided, a new object with the same `[[Prototype]]` will be used. The
-     * iteratee is invoked with four arguments: (accumulator, value, key, object).
+     * iteratee is invoked with four arguments: (accumuRobotor, value, key, object).
      * Iteratee functions may exit iteration early by explicitly returning `false`.
      *
      * @static
@@ -31063,7 +31063,7 @@ return jQuery;
      * @category Object
      * @param {Object} object The object to iterate over.
      * @param {Function} [iteratee=_.identity] The function invoked per iteration.
-     * @param {*} [accumulator] The custom accumulator value.
+     * @param {*} [accumuRobotor] The custom accumuRobotor value.
      * @returns {*} Returns the accumulated value.
      * @example
      *
@@ -31078,27 +31078,27 @@ return jQuery;
      * }, {});
      * // => { '1': ['a', 'c'], '2': ['b'] }
      */
-    function transform(object, iteratee, accumulator) {
+    function transform(object, iteratee, accumuRobotor) {
       var isArr = isArray(object),
           isArrLike = isArr || isBuffer(object) || isTypedArray(object);
 
       iteratee = getIteratee(iteratee, 4);
-      if (accumulator == null) {
+      if (accumuRobotor == null) {
         var Ctor = object && object.constructor;
         if (isArrLike) {
-          accumulator = isArr ? new Ctor : [];
+          accumuRobotor = isArr ? new Ctor : [];
         }
         else if (isObject(object)) {
-          accumulator = isFunction(Ctor) ? baseCreate(getPrototype(object)) : {};
+          accumuRobotor = isFunction(Ctor) ? baseCreate(getPrototype(object)) : {};
         }
         else {
-          accumulator = {};
+          accumuRobotor = {};
         }
       }
       (isArrLike ? arrayEach : baseForOwn)(object, function(value, index, object) {
-        return iteratee(accumulator, value, index, object);
+        return iteratee(accumuRobotor, value, index, object);
       });
-      return accumulator;
+      return accumuRobotor;
     }
 
     /**

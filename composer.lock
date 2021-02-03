@@ -4386,7 +4386,7 @@
                 "symfony/yaml": "^4.4|^5.0"
             },
             "suggest": {
-                "psr/log-implementation": "To use logging capability in translator",
+                "psr/log-implementation": "To use logging capability in transRobotor",
                 "symfony/config": "",
                 "symfony/yaml": ""
             },
