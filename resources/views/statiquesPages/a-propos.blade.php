@@ -1,4 +1,4 @@
-
+@section('title', 'A propos | ' . config('app.name'))
 @extends('layouts.appFront')
 
 @section('content')

@@ -1,16 +1,18 @@
-
+@section('title', 'FAQ | ' . config('app.name'))
 @extends('layouts.appFront')
 
 @section('content')
 
 @include('incs.topBarFront')
 @include('incs.headerFront') 
+
 		<!-- Content
         ============================================= -->
         <section id="page-title">
 
 			<div class="container clearfix">
-				<h1>Comment utiliser Ressources Relationnelles dans son quotidien ? </h1>
+				<h1>A propos de l'application Ressources Relationnelles</h1>
+			 
 			</div>
 
         </section>
@@ -22,22 +24,22 @@
 					<div class="row gutter-40 col-mb-80">
 						<!-- Post Content
 						============================================= -->
-						<div class="postcontent col-lg-12">
+						<div class="postcontent col-lg-9">
 
 							<div id="faqs" class="faqs">
 
 								<div id="faqs-list" class="fancy-title title-bottom-border">
-									<h3>Questions / réponses</h3>
+									<h3>Foire aux questions </h3>
 								</div>
 
 								<ul class="iconlist faqlist">
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-1">Ressources Relationnelles qu'est-ce que c'est ? </a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-2">A quoi sert et comment fonctionne Ressources Relationnelles ?</a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-3">Pourquoi améliorer ma communication ?</a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-4">Ressources Relationnelles n'est pas un site de rencontre, pourquoi ?</a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-5">Télécharger l'application</a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-6">Comment utiliser l'application ?</a></strong></li>
-									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-7">Je veux proposer une ou des ressource(s)</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-1">How do I become an author?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-2">Helpful Resources for Authors</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-3">How much money can I make?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-4">Can I offer my items for free on a promotional basis?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-5">An Introduction to the Marketplaces for Authors</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-6">How does the Tuts+ Premium affiliate program work?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-7">What Images, Videos, Code or Music Can I Use in my Items?</a></strong></li>
 									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-8">Can I use trademarked names in my items?</a></strong></li>
 									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-9">Tips for Increasing Your Referral Income</a></strong></li>
 									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-10">How can I get support for an item which isn't working correctly?</a></strong></li>
@@ -46,7 +48,7 @@
 
 								<div class="divider"><i class="icon-circle"></i></div>
 
-								<h3 id="faq-1"><strong>Q.</strong> Ressources Relationnelles qu'est-ce que c'est ? </h3>
+								<h3 id="faq-1"><strong>Q.</strong> How do I become an author?</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, dolorum, vero ipsum molestiae minima odio quo voluptate illum excepturi quam cum voluptates doloribus quae nisi tempore necessitatibus dolores ducimus enim libero eaque explicabo suscipit animi at quaerat aliquid ex expedita perspiciatis? Saepe, aperiam, nam unde quas beatae vero vitae nulla.</p>
 
 								<div class="divider divider-right"><a href="#" data-scrollto="#faqs-list"><i class="icon-chevron-up"></i></a></div>
@@ -105,14 +107,87 @@
 
 							</div>
 
-						</div><!-- .postcontent end --> 
+						</div><!-- .postcontent end -->
+
+						<!-- Sidebar
+						============================================= -->
+						<div class="sidebar col-lg-3">
+							<div class="sidebar-widgets-wrap">
+
 								 
+
+								<div class="widget clearfix">
+
+									<h4>Dernières ressources</h4>
+									<div class="posts-sm row col-mb-30" id="post-list-sidebar">
+										<div class="entry col-12">
+											<div class="grid-inner row no-gutters">
+												<div class="col-auto"> 
+												</div>
+												<div class="col pl-3">
+													<div class="entry-title">
+														<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li>10th July 2021</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="entry col-12">
+											<div class="grid-inner row no-gutters">
+												<div class="col-auto"> 
+												</div>
+												<div class="col pl-3">
+													<div class="entry-title">
+														<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li>10th July 2021</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="entry col-12">
+											<div class="grid-inner row no-gutters">
+												<div class="col-auto"> 
+												</div>
+												<div class="col pl-3">
+													<div class="entry-title">
+														<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+													</div>
+													<div class="entry-meta">
+														<ul>
+															<li>10th July 2021</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+ 
+								<div class="widget clearfix">
+
+									<h4>Notre nouvelle publicité</h4>
+									<div class="fluid-width-video-wrapper" style="padding-top: 50%;"><iframe src="//player.vimeo.com/video/103927232" allow="autoplay; fullscreen" allowfullscreen="" id="fitvid0"></iframe></div>
+
+								</div>
+
+							</div>
+						</div><!-- .sidebar end -->
 					</div>
 
 				</div>
 			</div>
 		</section>
-	 
-
+	
 		@include('incs.footerFront')
 		@endsection

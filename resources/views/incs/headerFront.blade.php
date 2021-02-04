@@ -7,7 +7,7 @@
 
 					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
 						<div id="logo">
-							<a href="route welcom" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="Canvas Logo"></a>
+							<a href="aide" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="Canvas Logo"></a>
 							<a href="index.html" class="retina-logo"><img src="{{ asset('images/logo-ressources-relationnelles.png') }}" alt="Logo Ressources Relationnelles"></a>
                             
                         </div>
@@ -17,17 +17,17 @@
 						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item active">
-									<a class="nav-link" href="#">Accueil</a>
+									<a class="nav-link" href="{{ route('home') }}" title="Accueil site Ressources Relationnelles">Accueil</a>
 								</li>
 								
 								<li class="nav-item">
-									<a href="#" class="nav-link">Aide</a>
+									<a href="{{ route('aide') }}"  class="nav-link" title="On vous dit tout sur Ressources Relationnelles">Aide</a>
 								</li> 
 								<li class="nav-item">
-									<a href="#" class="nav-link">A propos</a>
+									<a href="{{ route('home') }}"  class="nav-link" title="Toutes les ressources relationnelles">Les ressources</a>
 								</li>
 								<li class="nav-item">
-									<a href="#" class="nav-link">Contact</a>
+									<a href="{{ route('contact') }}"  class="nav-link" title="Contactez un administrateur">Contact</a>
 								</li>
 							</ul>
 						</div>
