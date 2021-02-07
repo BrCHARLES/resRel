@@ -5,6 +5,7 @@
 
 @include('incs.topBarFront')
 @include('incs.headerFront') 
+
 		<!-- Slider ============================================= -->
 		<section id="slider" class="slider-element min-vh-50 indx">
 			<div class="video-overlay" style="background: rgba(0,0,0,0.4); z-index: 1"></div>
@@ -14,7 +15,7 @@
 						<div class="row justify-content-center">
 							<div class="col-md-7">
 								<div class="slider-title mb-5 dark clearfix">
-									<h2 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">Améliorer ses relations au quotidien <span class="t-rotate text-white">avec sa famille, avec son/sa conjoint(e), avec ses amis, avec des inconnus, au travail</span></h2>
+									<h1 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">avec sa famille, avec son/sa conjoint(e), avec ses amis, avec des inconnus, au travail</span></h1>
 							 	</div>
 								<div class="clear"></div>
 								<div class="input-group input-group-lg mt-1">
@@ -46,10 +47,12 @@
 				<div class="container">
 
 					<div class="heading-block border-bottom-0 my-4 center">
-						<h3>Catégories de ressources</h3>
-						<span>Communication culture développement personnel qualité de vie recherche de sens
-							loisirs monde professionnel
-							santé spiritualité vie affective parentalité intelligence émotionnelle
+						<h3>Domaines relationnels</h3>
+						<span>
+						Comment adapter notre communication dans des situations sociales différentes ?<br>
+						Comment  améliorer nos échanges pour fonder des relations coopératives et efficaces ?  <br>
+						Ce site internet répond à ces questions et bien plus. <br>
+						Il nous aide à faire le point pour améliorer au quotidien nos compétences relationnelles dans les situations suivantes :
 						</span>
 					</div>
 
@@ -60,7 +63,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(251,51,100,0.8);">
-									<span><i class="icon-photo"></i>Famille</span>
+									<span><i class="icon-photo"></i>Parentalité</span>
 								</a>
 							</div>
 						</div>
@@ -69,7 +72,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(29,74,103,0.8);">
-									<span><i class="icon-code1"></i>Development</span>
+									<span><i class="icon-code1"></i>Vie affective</span>
 								</a>
 							</div>
 						</div>
@@ -79,7 +82,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(50,71,66,0.8);">
-									<span><i class="icon-line2-user"></i>Teacher</span>
+									<span><i class="icon-line2-user"></i>Intelligence émotionnelle</span>
 								</a>
 							</div>
 						</div>
@@ -88,7 +91,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(70,58,69,0.8);">
-									<span><i class="icon-food"></i>Food</span>
+									<span><i class="icon-food"></i>Communication</span>
 								</a>
 							</div>
 						</div>
@@ -97,7 +100,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(252,108,52,0.8);">
-									<span><i class="icon-chart-bar1"></i>Business</span>
+									<span><i class="icon-chart-bar1"></i>Culture</span>
 								</a>
 							</div>
 						</div>
@@ -106,7 +109,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(158,108,87,0.8);">
-									<span><i class="icon-heartbeat"></i>Health Fitness</span>
+									<span><i class="icon-heartbeat"></i>Loisirs</span>
 								</a>
 							</div>
 						</div>
@@ -115,7 +118,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(164,108,119,0.85);">
-									<span><i class="icon-line2-game-controller"></i>Lifestyle</span>
+									<span><i class="icon-line2-game-controller"></i>Monde professionnel</span>
 								</a>
 							</div>
 						</div>
@@ -124,7 +127,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(80,167,159,0.8);">
-									<span><i class="icon-line2-globe"></i>Language</span>
+									<span><i class="icon-line2-globe"></i>Santé physique et psychique</span>
 								</a>
 							</div>
 						</div>
@@ -133,7 +136,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(23,116,234,0.8);">
-									<span><i class="icon-paint-brush"></i>Paint</span>
+									<span><i class="icon-paint-brush"></i>Développement personnel</span>
 								</a>
 							</div>
 						</div>
@@ -142,7 +145,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(108,156,148,0.85);">
-									<span><i class="icon-line2-camera"></i>Photography</span>
+									<span><i class="icon-line2-camera"></i>Recherche de sens</span>
 								</a>
 							</div>
 						</div>
@@ -151,7 +154,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(227,141,66,0.8);">
-									<span><i class="icon-line-share"></i>Digital Marketing</span>
+									<span><i class="icon-line-share"></i>Qualité de vie</span>
 								</a>
 							</div>
 						</div>
@@ -160,7 +163,7 @@
 							<div class="card hover-effect">
 								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
 								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(39,103,240,0.8);">
-									<span><i class="icon-line-book"></i>Academics</span>
+									<span><i class="icon-line-book"></i>Spiritualité</span>
 								</a>
 							</div>
 						</div>
@@ -183,7 +186,6 @@
 
 						<div class="heading-block border-bottom-0 mb-5 center">
 							<h3>Les dernières ressources ajoutées</h3>
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum. Voluptatibus, perspiciatis placeat.</span>
 						</div>
 
 						<div class="clear"></div>
@@ -245,78 +247,7 @@
 					<div class="wave-bottom" style="position: absolute; top: auto; bottom: 0; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x; transform: rotate(180deg);"></div>
 				</div>
 
-				<!-- Instructors Section
-				============================================= -->
-				<div class="section bg-transparent" style="padding: 60px 0 40px;">
-					<div class="container">
-
-						<div class="heading-block border-bottom-0 mb-5 center">
-							<h3>Nos contributeurs les plus actifs</h3>
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla natus mollitia ipsum. Voluptatibus, perspiciatis placeat.</span>
-						</div>
-
-						<div class="clear"></div>
-
-						<div class="row">
-
-							<!-- Instructors 1
-							============================================= -->
-							<div class="col-lg-3 col-sm-6 mb-4">
-								<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-									<div class="fbox-icon">
-										<i><img src="{{ asset('images/auteurs/1.jpg')}}" class="border-0 bg-transparent shadow-sm" style="z-index: 2;" alt="Image"></i>
-									</div>
-									<div class="fbox-content">
-										<h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Dylan Meringue</a><br><small class="subtitle nott color">Digital Marketing</small></h3>
-										 <p class="text-dark mt-0"><strong>23</strong> Courses</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Instructors 2
-							============================================= -->
-							<div class="col-lg-3 col-sm-6 mb-4">
-								<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-									<div class="fbox-icon">
-										<i><img src="{{ asset('images/auteurs/2.jpg')}}" class="border-0 bg-transparent shadow-sm" style="z-index: 2;" alt="Image"></i>
-									</div>
-									<div class="fbox-content">
-										<h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Alan Fresco</a><br><small class="subtitle nott color">Health &amp; Fitness</small></h3>
-										<p class="text-dark mt-0"><strong>29</strong> Courses</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Instructors 3
-							============================================= -->
-							<div class="col-lg-3 col-sm-6 mb-4">
-								<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-									<div class="fbox-icon">
-										<i><img src="{{ asset('images/auteurs/3.jpg')}}" class="border-0 bg-transparent shadow-sm" style="z-index: 2;" alt="Image"></i>
-									</div>
-									<div class="fbox-content">
-										<h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Gunther Beard</a><br><small class="subtitle nott color">Photography</small></h3>
-									 	<p class="text-dark mt-0"><strong>11</strong> Courses</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Instructors 4
-							============================================= -->
-							<div class="col-lg-3 col-sm-6 mb-4">
-								<div class="feature-box hover-effect shadow-sm fbox-center fbox-bg fbox-light fbox-lg fbox-effect">
-									<div class="fbox-icon">
-										<i><img src="{{ asset('images/auteurs/4.jpg')}}" class="border-0 bg-transparent shadow-sm" style="z-index: 2;" alt="Image"></i>
-									</div>
-									<div class="fbox-content">
-										<h3 class="mb-4 nott ls0"><a href="#" class="text-dark">Desmond Eagle</a><br><small class="subtitle nott color">Lifestyle</small></h3>
-									 	<p class="text-dark mt-0"><strong>12</strong> Courses</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			 
 
 				<!-- Featues Section
 				============================================= -->

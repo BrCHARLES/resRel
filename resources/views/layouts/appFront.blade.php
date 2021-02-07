@@ -36,11 +36,11 @@
 	<div id="gotoTop" class="icon-angle-up"></div>
 
 	<!-- JavaScripts ============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.min.js"></script>
+	<script src="{{ asset('js/jquery.js') }}"></script>
+	<script src="{{ asset('js/plugins.min.js') }} "></script>
 
 	<!-- Footer Scripts ============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="{{ asset('js/functions.js') }} "></script>
 
 </body>
 </html>

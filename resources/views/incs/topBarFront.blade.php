@@ -5,17 +5,22 @@
 				<div class="row justify-content-between">
 					<div class="col-12 col-md-auto mr-md-auto">
 
-						<!-- Top Links
-						============================================= -->
+						<!-- Top Links ============================================= -->
 						<div class="top-links">
 							<ul class="top-links-container">
-								<li class="top-links-item"><a href="#">Langues</a>
+								<li class="top-links-item"><a href="#">{{ __("Langues") }}</a>
 									<ul class="top-links-sub-menu">
-										<li class="top-links-item"><a href="#">Anglais</a></li>
-										<li class="top-links-item"><a href="#">Allemand</a></li>
-										<li class="top-links-item"><a href="#">Espagnol</a></li>
-										<li class="top-links-item"><a href="#">Italien</a></li>
-										<li class="top-links-item"><a href="#">Portugais</a></li>
+										@foreach (config('app.available_locales') as $locale)
+											<li class="top-links-item">
+												<a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
+												@if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
+											</li>
+											{{-- <li class="top-links-item"><a href="en">Anglais</a></li>
+											<li class="top-links-item"><a href="de">Allemand</a></li>
+											<li class="top-links-item"><a href="ar">Arabe</a></li> 
+											<li class="top-links-item"><a href="it">Italien</a></li>
+											<li class="top-links-item"><a href="sp">Espagnol</a></li>  --}}
+										@endforeach
 									</ul>
 								</li>
 							</ul>
@@ -29,7 +34,7 @@
 						============================================= -->
 						<div class="top-links">
 							<ul class="top-links-container"> 
-								<li class="top-links-item d-none d-sm-inline-block"><a href="#"><i class="icon-download-alt"></i> Téléchargez l'application</a></li>
+								<li class="top-links-item d-none d-sm-inline-block"><a href="#"><i class="icon-download-alt"></i> {{ __("Télécharger l'application") }}</a></li>
 							</ul>
 						</div><!-- .top-links end -->
 					</div>
@@ -44,3 +49,4 @@
 				</div>
 			</div>
 		</div>
+ 

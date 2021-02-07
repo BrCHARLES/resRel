@@ -4,12 +4,10 @@
 		<header id="header" class="header-size-sm" data-sticky-shrink="false">
 			<div class="container">
 				<div class="header-row">
-
 					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
 						<div id="logo">
-							<a href="aide" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="Canvas Logo"></a>
-							<a href="index.html" class="retina-logo"><img src="{{ asset('images/logo-ressources-relationnelles.png') }}" alt="Logo Ressources Relationnelles"></a>
-                            
+							<a href="{{ route('welcome', app()->getLocale()) }}" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
+							<a href="" class="retina-logo"><img src="{{ asset('images/logo-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
                         </div>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-line-menu"></span>
@@ -17,17 +15,16 @@
 						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item active">
-									<a class="nav-link" href="{{ route('home') }}" title="Accueil site Ressources Relationnelles">Accueil</a>
+									<a href="{{ route('welcome', app()->getLocale()) }}" class="nav-link" title="Accueil site Ressources Relationnelles">{{ __("Accueil")}}</a>
 								</li>
-								
 								<li class="nav-item">
-									<a href="{{ route('aide') }}"  class="nav-link" title="On vous dit tout sur Ressources Relationnelles">Aide</a>
+									<a href="{{ route('aide', app()->getLocale()) }}" class="nav-link" title="On vous dit tout sur Ressources Relationnelles">{{ __("Aide")}}</a>
 								</li> 
 								<li class="nav-item">
-									<a href="{{ route('home') }}"  class="nav-link" title="Toutes les ressources relationnelles">Les ressources</a>
+									<a href="{{ route('a-propos', app()->getLocale()) }}"  class="nav-link" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
 								</li>
 								<li class="nav-item">
-									<a href="{{ route('contact') }}"  class="nav-link" title="Contactez un administrateur">Contact</a>
+									<a href="{{ route('contact', app()->getLocale()) }}"  class="nav-link" title="Contactez un administrateur">{{ __("Contact")}}</a>
 								</li>
 							</ul>
 						</div>
@@ -42,8 +39,8 @@
                         <div class="header-misc">
             
                             <div class="header-buttons mr-3">
-                                <a href="#" class="button button-rounded button-border button-small m-0">Se connecter</a>
-                                <a href="#" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
+                                <a href="#" class="button button-rounded button-border button-small m-0">{{ __("Se connecter")}}</a>
+                                <a href="#" class="button button-rounded button-small m-0 ml-2">{{ __("S'identifier")}}</a>
                             </div>
             
                             <!-- Top Search

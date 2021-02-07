@@ -5,12 +5,12 @@
 
 @include('incs.topBarFront')
 @include('incs.headerFront') 
+ 
 		<!-- Content
         ============================================= -->
-        <section id="page-title">
-
+        <section id="page-title"> 
 			<div class="container clearfix">
-				<h1>Comment utiliser Ressources Relationnelles dans son quotidien ? </h1>
+				<h1>{{ __("COMMENT UTILISER RESSOURCES RELATIONNELLES DANS SON QUOTIDIEN ?")}}</h1>
 			</div>
 
         </section>

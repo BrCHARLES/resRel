@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class StaticViewsController extends Controller
 {
+    
     public function apropos(){
         return view('statiquesPages/a-propos');
     }
