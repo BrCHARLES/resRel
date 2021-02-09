@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
         public function index($locale){
             App::setlocale($locale);
             session()->put('locale', $locale);
-            
             return redirect()->back();
     }
 }

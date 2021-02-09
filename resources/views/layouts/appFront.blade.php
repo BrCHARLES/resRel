@@ -38,9 +38,15 @@
 	<!-- JavaScripts ============================================= -->
 	<script src="{{ asset('js/jquery.js') }}"></script>
 	<script src="{{ asset('js/plugins.min.js') }} "></script>
-
+    <script src="{{ asset('js/bs-datatable.js') }}"></script>
 	<!-- Footer Scripts ============================================= -->
 	<script src="{{ asset('js/functions.js') }} "></script>
 
+  
+    <script>
+		$(document).ready(function() {
+			$('#datatable1').dataTable();
+		});
+	</script>
 </body>
 </html>
