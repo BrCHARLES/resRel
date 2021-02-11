@@ -83,7 +83,7 @@
                         </nav><!-- #primary-menu end -->
             
                         <form class="top-search-form" action="search.html" method="get">
-                            <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+                            <input type="text" name="q" class="form-control" value="" placeholder="Rechercher" autocomplete="off">
                         </form>
             
                     </div>

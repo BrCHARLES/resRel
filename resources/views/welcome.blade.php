@@ -1,4 +1,6 @@
 @section('title', config('app.name'))
+@section('description', '{{ __("Ressources Relationnelles est un site du ministère des solidarités et de la santé pour améliorer notre communication au qutodien")}}')
+@section('keywords', '{{ __("Ressources relationnelles")}}') 
 @extends('layouts.appFront')
 
 @section('content')
@@ -7,19 +9,19 @@
 @include('incs.headerFront') 
 
 		<!-- Slider ============================================= -->
-		<section id="slider" class="slider-element min-vh-50 indx">
-			<div class="video-overlay" style="background: rgba(0,0,0,0.4); z-index: 1"></div>
+		<section id="slider" class="slider-element min-vh-75 indx">
+			<div class="video-overlay" style="background: rgba(22, 134, 199, 0.7); z-index: 1"></div> 
 			<div class="slider-inner">
 				<div class="vertical-middle">
 					<div class="container text-center">
 						<div class="row justify-content-center">
 							<div class="col-md-7">
 								<div class="slider-title mb-5 dark clearfix">
-									<h1 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">avec sa famille, avec son/sa conjoint(e), avec ses amis, avec des inconnus, au travail</span></h1>
+									<h1 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">{{ __("avec sa famille")}}, {{ __("avec son/sa conjoint(e)")}}, {{ __("avec ses amis")}}, {{ __("avec des inconnus")}}, {{ __("au travail")}}</span></h1>
 							 	</div>
 								<div class="clear"></div>
 								<div class="input-group input-group-lg mt-1">
-									<input class="form-control rounded border-0" type="search" placeholder="Rechercher ..." aria-label="Search">
+									<input class="form-control rounded border-0" type="search" placeholder="{{ __("Rechercher")}}" aria-label="Search">
 									<div class="input-group-append">
 										<button class="btn" type="submit"><i class="icon-line-search font-weight-bold"></i></button>
 									</div>
@@ -29,11 +31,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		
-
-		
-
+		</section> 
 		<!-- Content
 		============================================= -->
 		<section id="content">
@@ -46,129 +44,28 @@
 
 				<div class="container">
 
-					<div class="heading-block border-bottom-0 my-4 center">
-						<h3>Domaines relationnels</h3>
-						<span>
-						Comment adapter notre communication dans des situations sociales différentes ?<br>
-						Comment  améliorer nos échanges pour fonder des relations coopératives et efficaces ?  <br>
-						Ce site internet répond à ces questions et bien plus. <br>
-						Il nous aide à faire le point pour améliorer au quotidien nos compétences relationnelles dans les situations suivantes :
-						</span>
-					</div>
-
-					<!-- Categories
-					============================================= -->
+					<div class="border-bottom-0 my-2 center">
+						<h2>{{ __("Domaines relationnels")}}</h2> 
+							<h4>{{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}</h4>
+							<h4>{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}} </h4>
+							<h4>{{ __("Ce site internet répond à ces questions et bien plus.")}} 
+							{{ __("Il nous aide à faire le point pour créer, renforcer et enrichir nos relations dans les situations suivantes.")}}
+							</h4>
+					</div> 
+				
+					<!-- Categories ============================================= -->
 					<div class="row course-categories clearfix mb-4">
+						@foreach ($categories as $object)
 						<div class="col-lg-2 col-sm-3 col-6 mt-4">
 							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(251,51,100,0.8);">
-									<span><i class="icon-photo"></i>Parentalité</span>
+								<img class="card-img" src="{{ $object->image }}" alt="Card image">
+								<a href="#" class="card-img-overlay rounded p-0" style="background-color: {{ $object->color }};">
+									<span><i class="icon{{ $object->icon }}"></i>{{ $object->name}}  </span>
 								</a>
 							</div>
 						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(29,74,103,0.8);">
-									<span><i class="icon-code1"></i>Vie affective</span>
-								</a>
-							</div>
-						</div>
-
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(50,71,66,0.8);">
-									<span><i class="icon-line2-user"></i>Intelligence émotionnelle</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(70,58,69,0.8);">
-									<span><i class="icon-food"></i>Communication</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(252,108,52,0.8);">
-									<span><i class="icon-chart-bar1"></i>Culture</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(158,108,87,0.8);">
-									<span><i class="icon-heartbeat"></i>Loisirs</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(164,108,119,0.85);">
-									<span><i class="icon-line2-game-controller"></i>Monde professionnel</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(80,167,159,0.8);">
-									<span><i class="icon-line2-globe"></i>Santé physique et psychique</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(23,116,234,0.8);">
-									<span><i class="icon-paint-brush"></i>Développement personnel</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(108,156,148,0.85);">
-									<span><i class="icon-line2-camera"></i>Recherche de sens</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(227,141,66,0.8);">
-									<span><i class="icon-line-share"></i>Qualité de vie</span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect">
-								<img class="card-img" src="{{ asset('images/categories/famille.jpg') }}" alt="Card image">
-								<a href="#" class="card-img-overlay rounded p-0" style="background-color: rgba(39,103,240,0.8);">
-									<span><i class="icon-line-book"></i>Spiritualité</span>
-								</a>
-							</div>
-						</div>
-
-					</div>
+						@endforeach 
+					</div> 
 
 					<div class="clear"></div>
 
