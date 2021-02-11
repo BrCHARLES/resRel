@@ -22,3 +22,7 @@ Route::get('/aide', function(){
 });
 // Routes nommées : 
 // liens dynamiques
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

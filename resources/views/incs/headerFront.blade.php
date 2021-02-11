@@ -29,6 +29,15 @@
 								<li class="nav-item">
 									<a href="#" class="nav-link">Contact</a>
 								</li>
+                                <?php
+                                    if (Auth::user()) {
+                                        ?>
+                                        <li class="nav-item">
+                                            <a href="{{ route('dashboard') }}" class="nav-link">Mon compte</a>
+                                        </li>
+                                        <?php
+                                    }
+                                ?>
 							</ul>
 						</div>
 					</nav>
@@ -42,8 +51,8 @@
                         <div class="header-misc">
             
                             <div class="header-buttons mr-3">
-                                <a href="#" class="button button-rounded button-border button-small m-0">Se connecter</a>
-                                <a href="#" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
+                                <a href="{{ route('register') }}" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
+                                <a href="{{ route('login') }}" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
                             </div>
             
                             <!-- Top Search
