@@ -82,7 +82,7 @@
 					<div class="container">
 
 						<div class="heading-block border-bottom-0 mb-5 center">
-							<h3>Les dernières ressources ajoutées</h3>
+							<h3>{{ __("Les dernières ressources ajoutées")}} </h3>
 						</div>
 
 						<div class="clear"></div>
