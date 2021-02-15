@@ -48,13 +48,8 @@
                         <div class="header-misc">
             
                             <div class="header-buttons mr-3">
-<<<<<<< HEAD
                                 <a href="{{ route('register') }}" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
                                 <a href="{{ route('login') }}" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
-=======
-                                <a href="#" class="button button-rounded button-border button-small m-0">{{ __("Se connecter")}}</a>
-                                <a href="#" class="button button-rounded button-small m-0 ml-2">{{ __("S'identifier")}}</a>
->>>>>>> 700791d37a30157263a63453454f51ca6c590667
                             </div>
             
                             <!-- Top Search

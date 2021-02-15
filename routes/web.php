@@ -47,7 +47,6 @@ Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name
 // Route::get('/admin/types/delete/{id}', 'TypeController@destroy' );
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
-<<<<<<< HEAD
 Route::get('/contact', function(){
     return view('statics.contact');
 });
@@ -63,9 +62,7 @@ Route::get('/aide', function(){
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-=======
 //****************  TYPES DE RESSOURCES  ****************//
 Route::get('/admin/datatable', function() {
     return view('/admin/datatable');
 });
->>>>>>> 700791d37a30157263a63453454f51ca6c590667
