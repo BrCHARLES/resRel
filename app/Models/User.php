@@ -20,15 +20,14 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
-    public static $role = array("admin"=>0, "moderateur"=>1, "membre"=>3);
-
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role'
     ];
 
     /**
@@ -61,17 +60,17 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    private function setRole(String $role){
+    public function setRole(String $role){
         $this->role = $role;
     }
-    private function getRole(){
+    public function getRole(){
         return $this->role;
     }
     
-    private function setName($name){
+    public function setName($name){
         $this->name = $name;
     }
-    private function getName(){
+    public function getName(){
         return $this->name;
     }
 }
