@@ -1,4 +1,4 @@
-
+@section('title', 'Contact | ' . config('app.name'))
 @extends('layouts.appFront')
 
 @section('content')

@@ -53,7 +53,11 @@
 	font-weight: 400;
 	font-size: 14px;
 }
-
+.titleDasboard{
+	color:#000;
+	font-size:2rem!important;
+	font-weight: bold;
+}
 /* Text Rotater
 ---------------------------------------------------------------------------- */
 .text-rotater { 

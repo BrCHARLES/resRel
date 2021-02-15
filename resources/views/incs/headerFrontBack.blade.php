@@ -1,4 +1,5 @@
-		<!-- Top Bar
+
+			<!-- Top Bar
 		============================================= -->
 		<div id="top-bar" class="bg-color dark">
 			<div class="container clearfix">
@@ -7,23 +8,7 @@
 
 						<!-- Top Links ============================================= -->
 						<div class="top-links">
-							<ul class="top-links-container">
-								<li class="top-links-item"><a href="#">{{ __("Langues") }}</a>
-									<ul class="top-links-sub-menu">
-										@foreach (config('app.available_locales') as $locale)
-											<li class="top-links-item">
-												<a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
-												@if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
-											</li>
-											{{-- <li class="top-links-item"><a href="en">Anglais</a></li>
-											<li class="top-links-item"><a href="de">Allemand</a></li>
-											<li class="top-links-item"><a href="ar">Arabe</a></li> 
-											<li class="top-links-item"><a href="it">Italien</a></li>
-											<li class="top-links-item"><a href="sp">Espagnol</a></li>  --}}
-										@endforeach
-									</ul>
-								</li>
-							</ul>
+						 
 						</div><!-- .top-links end -->
 
 					</div>
@@ -50,3 +35,36 @@
 			</div>
 		</div>
  
+		<div class="header-size-sm" data-sticky-shrink="false" class="bg-color dark">
+			<div class="container">
+				<div class="header-row">
+					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
+						<div>
+					    	<span style="titleDasboard">DASHOARD RESSOURCES RELATIONNELLES TEMPORAIRE</span>
+                        </div>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-line-menu"></span>
+						</button>
+						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a href="#" class="nav-link" title="Créer une ressource">Créer une ressource</a>
+								</li>
+								<li class="nav-item">
+									<a href=" " class="nav-link" title="Les types de ressources">Types de ressources</a>
+								</li> 
+								<li class="nav-item">
+									<a href=" "  class="nav-link" title="Gérer les utilisateurs">Utilisateurs</a>
+								</li>
+								<li class="nav-item">
+									<a href=" "  class="nav-link" title="Contactez un administrateur">Statistiques</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+				</div>
+			</div> 
+        </div><!-- #header end -->
+        <hr>
+        

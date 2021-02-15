@@ -1,6 +1,5 @@
-
+@section('title', 'TITRE PAGES' . config('app.name'))
 @extends('layouts.appFront')
-@section('title', 'Ressources relationnelles')
 
 @section('content')
 
