@@ -15,16 +15,16 @@
 						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item active">
-									<a href="{{ route('welcome', app()->getLocale()) }}" class="nav-link" title="Accueil site Ressources Relationnelles">{{ __("Accueil")}}</a>
+									<a href="{{ route('welcome', app()->getLocale()) }}" class="st {{ active('welcome') }}" title="Accueil site Ressources Relationnelles">{{ __("Accueil")}}</a>
 								</li>
 								<li class="nav-item">
-									<a href="{{ route('aide', app()->getLocale()) }}" class="nav-link" title="On vous dit tout sur Ressources Relationnelles">{{ __("Aide")}}</a>
+									<a href="{{ route('aide', app()->getLocale()) }}" class="st {{ active('aide') }}" title="On vous dit tout sur Ressources Relationnelles">{{ __("Aide")}}</a>
 								</li> 
 								<li class="nav-item">
-									<a href="{{ route('a-propos', app()->getLocale()) }}"  class="nav-link" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
+									<a href="{{ route('a-propos', app()->getLocale()) }}"  class="st {{ active('a-propos') }}" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
 								</li>
 								<li class="nav-item">
-									<a href="{{ route('contact', app()->getLocale()) }}"  class="nav-link" title="Contactez un administrateur">{{ __("Contact")}}</a>
+									<a href="{{ route('contact', app()->getLocale()) }}"  class="st {{ active('contact') }}" title="Contactez un administrateur">{{ __("Contact")}}</a>
 								</li>
 							</ul>
 						</div>
@@ -47,10 +47,7 @@
                             ============================================= -->
                             <div id="top-search" class="header-misc-icon">
                                 <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-                            </div><!-- #top-search end -->
-            
-                         
-            
+                            </div><!-- #top-search end -->      
                         </div>
             
                         <div id="primary-menu-trigger">

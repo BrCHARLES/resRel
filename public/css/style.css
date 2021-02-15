@@ -78,7 +78,17 @@
 	- Youtube Video Backgrounds
 
 ---------------------------------------------------------------- */
-
+.st {
+	color: #000!important;
+	text-transform: none;
+    font-weight: bold;
+    letter-spacing: 0;
+    font-size: 15px; 
+	padding: 40px 15px
+}
+.active {
+	color: rgb(161, 10, 10)!important;  
+}
 
 .indx {
 	width: 100%; 
@@ -89,6 +99,9 @@
 	background-attachment: fixed;  
 	min-height: 200px;
 	background-size: cover;
+  }
+  .catImg {
+	  width: 40%;
   }
 /* ----------------------------------------------------------------
 	Bootstrap Adjustments

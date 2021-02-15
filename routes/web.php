@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StaticViewsController;
 use App\Http\Controllers\LocalizationController;
  
@@ -47,7 +48,12 @@ Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name
 // Route::get('/admin/types/delete/{id}', 'TypeController@destroy' );
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
-//****************  TYPES DE RESSOURCES  ****************//
+//****************  CATEGORIES DE RESSOURCES  ****************//
+
+Route::get('/admin/categories', [ CategoryController::class, 'index'])->name('admin.categories.index');
+
+
+//****************  pour des tests sur Datatable : a supprimer  ****************//
 Route::get('/admin/datatable', function() {
     return view('/admin/datatable');
 });

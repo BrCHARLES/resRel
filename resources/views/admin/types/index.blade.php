@@ -3,7 +3,7 @@
 
 @section('content')
 
-@include('incs.HeaderFrontBack') 
+@include('incs.HeaderBack') 
 <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb">

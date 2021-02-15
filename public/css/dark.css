@@ -69,14 +69,14 @@ body #side-panel.dark {
 }
 
 .dark .top-links-item:hover {
-	background-color: #333;
+	background-color: #1876b9;
 }
 
 .dark .top-links-sub-menu,
 .dark .top-links-section {
-	background: #333;
-	border-color: #444;
-	border-top-color: #1ABC9C;
+	background: #1876b9;
+	border-top-color: #FFFFFF;
+	border-top-color: #F1F1F1;
 }
 
 .dark .top-links-sub-menu .top-links-item:not(:first-child) {
@@ -84,7 +84,7 @@ body #side-panel.dark {
 }
 
 .dark .top-links-sub-menu .top-links-item:hover {
-	background-color: #383838;
+	background-color: #831616;
 }
 
 .dark #top-social li {
