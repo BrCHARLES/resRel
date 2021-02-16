@@ -1,6 +1,8 @@
 @section('title', config('app.name'))
 @extends('layouts.appFront')
 
+@include('incs.HeaderFrontBack')
+
 @section('content') 
 <div class="container">
     <div class="row">
