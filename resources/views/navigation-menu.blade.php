@@ -12,12 +12,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                <x-jet-nav-link href="/" :active="request()->routeIs('home')">
+                    <x-jet-nav-link href="/" :active="request()->routeIs('home')">
                         {{ __('Accueil') }}
                     </x-jet-nav-link>
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Tableau de bord') }}
                     </x-jet-nav-link>
+                    @if (Auth::user()->role == "admin")
+                        <x-jet-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
+                            {{ __('Gérer les ressources') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 

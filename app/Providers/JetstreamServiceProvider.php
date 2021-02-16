@@ -59,7 +59,6 @@ class JetstreamServiceProvider extends ServiceProvider
         ])->description(__('L\'administrateur peut réaliser toutes les actions.'));
         
         Jetstream::role('moderateur', __('Modérateur'), [
-            'create',
             'read',
             'update',
             'delete',

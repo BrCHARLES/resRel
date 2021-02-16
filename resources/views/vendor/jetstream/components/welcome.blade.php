@@ -2,7 +2,7 @@
     
 
     <div class="mt-8 text-2xl">
-        <h2 class="text-center">Bienvenue <?php Auth::user()->name ?> sur [Re]sources relationnelles !</h2>
+        <h2 class="text-center">Bienvenue<span style="color:blue; font-style: italic;"> <?php $user = Auth::user(); echo ucfirst($user->name); ?></span> sur [Re]sources relationnelles !</h2>
     </div>
 
     <div class="mt-6 ">
