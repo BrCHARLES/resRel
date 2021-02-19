@@ -48,16 +48,16 @@
 						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item">
-									<a href="{{ route('admin.categories.index')}}" class="st {{ active('admin.categories.index') }} " title="Les catégories de ressource">Catégories</a>
+									<a href="{{ route('admin.categories.index')}}" class="st {{ active('admin.categories*') }} " title="Les catégories de ressource">Catégories</a>
 								</li>
 								<li class="nav-item">
-									<a href="{{ route('admin.types.index')}}" class="st {{ active('admin.types.index') }} " title="Les types de ressources">Types</a>
+									<a href="{{ route('admin.types.index')}}" class="st {{ active('admin.types*') }} " title="Les types de ressources">Types</a>
 								</li> 
 								<li class="nav-item">
-									<a href=" "  class="st {{ active('admin.users.index') }} " title="Gérer les utilisateurs">Utilisateurs</a>
+									<a href=" "  class="st {{ active('admin.users*') }} " title="Gérer les utilisateurs">Utilisateurs</a>
 								</li>
 								<li class="nav-item">
-									<a href=" " class="st {{ active('admin.stats.index') }}">Statistiques</a>
+									<a href=" " class="st {{ active('admin.stats*') }}">Statistiques</a>
 								</li>
 							</ul> 
 						</div>

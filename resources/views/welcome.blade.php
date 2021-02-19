@@ -16,8 +16,11 @@
 					<div class="container text-center">
 						<div class="row justify-content-center">
 							<div class="col-md-7">
-								<div class="slider-title mb-5 dark clearfix">
-									<h1 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">{{ __("avec sa famille")}}, {{ __("avec son/sa conjoint(e)")}}, {{ __("avec ses amis")}}, {{ __("avec des inconnus")}}, {{ __("au travail")}}</span></h1>
+								<div class="slider-title mb-3 dark clearfix">
+									<h1><span><strong>{{ __("Ressources Relationnelles est une application du Ministère des solidartés et de la santé pour :")}} </strong> 
+											</h1>
+									<h2 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">
+										{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">{{ __("avec sa famille")}}, {{ __("avec son/sa conjoint(e)")}}, {{ __("avec ses amis")}}, {{ __("avec des inconnus")}}, {{ __("au travail")}}</span></h2>
 							 	</div>
 								<div class="clear"></div>
 								<div class="input-group input-group-lg mt-1">
@@ -45,24 +48,35 @@
 				<div class="container">
 
 					<div class="border-bottom-0 my-2 center">
-						<h2>{{ __("Domaines relationnels")}}</h2> 
+						<h3>{{ __("Une application pour mieux communiquer, échanger, s'écouter, se comprendre ? ")}}</h3> 
 							<h4>{{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}</h4>
 							<h4>{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}} </h4>
 							<h4>{{ __("Ce site internet répond à ces questions et bien plus.")}} 
-							{{ __("Il nous aide à faire le point pour créer, renforcer et enrichir nos relations dans les situations suivantes.")}}
+							{{ __("Il nous aide à faire le point pour créer, renforcer et enrichir nos relations dans les domaines relationnels suivants.")}}
 							</h4>
 					</div> 
+					{{-- <div>
+						@foreach ($types as $type)
+						<div class="col-lg-2 col-sm-3 col-6 mt-4">
+							<div class="card hover-effect"> 
+								<a href="#" class="card-img-overlay rounded p-0" >
+									<span> {{ $type->name }}</span>
+								</a>
+							</div>
+						</div>
+					@endforeach 
+
+					</div> --}}
 				
 					<!-- Categories ============================================= -->
 					<div class="row course-categories clearfix mb-4">
 						{{-- //https://laravel-news.com/translation-loader-package --}}
-						@foreach ($categories as $object)
+						@foreach ($cats as $object)
 							<div class="col-lg-2 col-sm-3 col-6 mt-4">
 								<div class="card hover-effect">
-									<img class="card-img" src="{{ $object->image }}" alt="Card image">
-									<a href="#" class="card-img-overlay rounded p-0" style="background-color: {{ $object->color }};">
-										<span><i class="icon{{ $object->icon }}"></i>  {{ $object->name}}</span>
-										
+									<img class="card-img" src="/{{ $object->image }}" alt="{{ $object->name }}">
+									<a href="#" class="card-img-overlay rounded p-0" style="background-color: {{ $object->color['rgba'] }};">
+										<span><i class="icon{{ $object->icon }}"></i>  {{ $object->name }}</span>
 									</a>
 								</div>
 							</div>

@@ -29,6 +29,9 @@
 	<div id="wrapper" class="clearfix">
 
         @yield('content')
+        <div class="container justify-content-center mt-3">
+          @include('incs.flash-message')
+        </div>
         
 	</div><!-- #wrapper end -->
 
@@ -42,11 +45,14 @@
 	<!-- Footer Scripts ============================================= -->
 	<script src="{{ asset('js/functions.js') }} "></script>
 
-  
+  <script src="{{ asset('js/icons.js') }} "></script>
+
     <script>
 		$(document).ready(function() {
 			$('#datatable1').dataTable();
 		});
 	</script>
+ 
+ @yield('name')
 </body>
 </html>

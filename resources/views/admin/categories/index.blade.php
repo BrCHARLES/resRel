@@ -12,8 +12,13 @@
         </div>
     </div>
     <hr>
+    @if($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <strong>{{ $message }}</strong>
+        </div>
+    @endif
     <div class="mb-2">
-            <button type="button" class="btn btn-info"><a href="{{ url('admin/category/create') }}" ><span style="color: white">Créer une nouvelle catégorie de ressource  </span> </a> </button>
+            <button type="button" class="btn btn-info"><a href="{{ route('admin.categories.create') }}" ><span style="color: white">Créer une nouvelle catégorie de ressource  </span> </a> </button>
     </div>
     <hr>
     <div class="row">
@@ -25,20 +30,20 @@
                             <td>id</td>
                             <td>Nom</td>
                             <td>Image</td>
-                            <td>Icone</td>
-                            <td>Couleur</td>
-                            <td>Actif </td>
+                            <td>Icône</td>
+                            <td>Couleur overlay</td> 
+                            {{-- <td>Actif</td> --}}
                             <td>Editer</td>   
                         </tr>
                     </thead>
-                    @foreach($categories as $cat)
+                    @foreach($cats as $cat)
                     <tr>
                         <td>{{ $cat->id }}</td>
                         <td>{{ $cat->name }}</td>
                         <td><img class="catImg" src="/{{ $cat->image }}" alt="{{ $cat->name }}"></td>  
-                        <td>{{ $cat->icon }}</td>  
-                        <td>{{ $cat->color }}</td>    
-                        <td> 
+                        <td><i class="icon{{ $cat->icon }}"></i> </td>  
+                        <td style="background-color: {{ $cat->color['rgba'] }};">{{ $cat->color['color'] }}</td>    
+                        {{-- <td> 
                          <a href="{{ url('admin/categories/activate/' . $cat->id) }}" id="activate">
                             @if($cat->actif == 1) 
                                 <i class="icon-ok" style="color:green" title="Désactiver la catégorie"></i>
@@ -46,7 +51,7 @@
                                 <i class="icon-remove" style="color:red" title="Activer la catégorie"></i>
                             @endif
                         </a> 
-                        </td>  
+                        </td>   --}}
                         <td><a href="{{ url('admin/categories/' . $cat->id) . '/edit' }}">editer </a></td>  
                     </tr> 
                     @endforeach

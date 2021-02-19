@@ -3,6 +3,7 @@
 use Middleware\Localization;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CatController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
@@ -10,12 +11,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StaticViewsController;
 use App\Http\Controllers\LocalizationController;
  
- 
-// INI Localization controller. Ne pas supprimer
-        // Route::get('/{lang}', function ($lang) {
-        //     App::setlocale($lang);
-        //     return view('welcome');
-        // }); 
 
 // View front avec application de la localisation
 
@@ -50,10 +45,9 @@ Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
 //****************  CATEGORIES DE RESSOURCES  ****************//
 
-Route::get('/admin/categories', [ CategoryController::class, 'index'])->name('admin.categories.index');
+Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.categories.index');
+Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
+Route::post('/admin/categories/store', [ CatController::class, 'store'])->name('admin.category.store');
 
 
-//****************  pour des tests sur Datatable : a supprimer  ****************//
-Route::get('/admin/datatable', function() {
-    return view('/admin/datatable');
-});
+ 

@@ -35,9 +35,7 @@
             <div id="header-wrap" class="bg-light">
                 <div class="container">
                     <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
-            
                         <div class="header-misc">
-            
                             <div class="header-buttons mr-3">
                                 <a href="#" class="button button-rounded button-border button-small m-0">{{ __("Se connecter")}}</a>
                                 <a href="#" class="button button-rounded button-small m-0 ml-2">{{ __("S'identifier")}}</a>

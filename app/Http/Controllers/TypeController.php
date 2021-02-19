@@ -24,6 +24,7 @@ class TypeController extends Controller
         $request->validate([
             'name' => 'required'
         ]); 
+        
         Type::create($request->all());
         return redirect()->route('admin.types.index');    
     }
