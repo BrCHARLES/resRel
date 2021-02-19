@@ -48,27 +48,31 @@
 				<div class="container">
 
 					<div class="border-bottom-0 my-2 center">
-						<h3>{{ __("Une application pour mieux communiquer, échanger, s'écouter, se comprendre ? ")}}</h3> 
-							<h4>{{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}</h4>
-							<h4>{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}} </h4>
-							<h4>{{ __("Ce site internet répond à ces questions et bien plus.")}} 
-							{{ __("Il nous aide à faire le point pour créer, renforcer et enrichir nos relations dans les domaines relationnels suivants.")}}
-							</h4>
-					</div> 
-					{{-- <div>
-						@foreach ($types as $type)
+						<h3>{{ __("Qu'est-ce que Ressources Relationnelles ?")}}</h3> 
+							<h4>{{ __("Une application pour mieux communiquer, échanger, s'écouter, se comprendre.")}}</h4> 
+							<h5> {{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}<br>
+							{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}}<br>
+							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les domaines relationnels suivants : ")}}
+						</h5>
+					</div>  
+					<div class="container">
+						<div class="row course-categories clearfix mb-4">
+						@foreach ($relations as $rel)
 						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<div class="card hover-effect"> 
-								<a href="#" class="card-img-overlay rounded p-0" >
-									<span> {{ $type->name }}</span>
-								</a>
-							</div>
+							<h4 style="inline"><a href="#">{{ $rel->relation }}</a> </h4>
 						</div>
-					@endforeach 
+						@endforeach 
+						</div>
+					</div>  
+					<hr>
 
-					</div> --}}
-				
-					<!-- Categories ============================================= -->
+<!-- Categories ============================================= -->
+						<div class="heading-block border-bottom-0 mb-5 center">
+							<h3>{{ __("Catégories de relations")}}</h3> 
+						</div>
+						 
+					<div class="clear"></div>
+					
 					<div class="row course-categories clearfix mb-4">
 						{{-- //https://laravel-news.com/translation-loader-package --}}
 						@foreach ($cats as $object)
@@ -187,7 +191,7 @@
 											</div>
 											<div class="fbox-content">
 												<h3 class="text-white">538 ressources </h3>
-												<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+												<p class="text-white"></p>
 											</div>
 										</div>
 									</div>
@@ -202,8 +206,8 @@
 												</a>
 											</div>
 											<div class="fbox-content">
-												<h3 class="text-white">Titre </h3>
-												<p class="text-white">Porro repellat vero sapiente amet vitae quibusdam necessitatibus consectetur, labore totam. Accusamus perspiciatis asperiores labore esse.</p>
+												<h3 class="text-white">Apprendre</h3>
+												<p class="text-white"></p>
 											</div>
 										</div>
 									</div>
@@ -218,8 +222,9 @@
 												</a>
 											</div>
 											<div class="fbox-content">
-												<h3 class="text-white">Exp</h3>
-												<p class="text-white">Quos, non, esse eligendi ab accusantium voluptatem. Maxime eligendi beatae, atque tempora ullam. Vitae delectus quia, consequuntur rerum quo.</p>
+												<h3 class="text-white">Je veux aider</h3>
+												<p><a href="https://www.jeveuxaider.gouv.fr/" class="text-white" title="Je veux aider"><u>Je veux aider</u></a></p>
+												<p><a href="https://solidarite-numerique.fr/" class="text-white" title="Solidarités numériques"><u>solidarite numerique</u></a></p>			
 											</div>
 										</div>
 									</div>
@@ -234,8 +239,11 @@
 												</a>
 											</div>
 											<div class="fbox-content">
-												<h3 class="text-white">Different Languages</h3>
-												<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+												<h3 class="text-white">J'ai besoin d'aide</h3>
+												<p><a href="https://www.allo119.gouv.fr/" class="text-white" title="119"><u>119 enfance en danger</u></a></p>			
+												<p><a href="https://www.alcooliques-anonymes.fr/" class="text-white" title="Alcooliques anonymes"><u>Alcooliques anonymes</u></a></p>			
+
+												
 											</div>
 										</div>
 									</div>
@@ -249,8 +257,7 @@
 
 								<div class="card shadow" data-animate="shake" style="opacity: 1 !important">
 									<div class="card-body"> 
-										<h4 class="card-title ls-1 mt-4 font-weight-bold h5">Titre </h4>
-										<h6 class="card-subtitle mb-4 font-weight-normal text-uppercase ls2 text-black-50">Free Registration here.</h6>
+										<h4 class="card-title ls-1 mt-4 font-weight-bold h5">Contact flash </h4>
 
 										<div class="form-widget">
 											<div class="form-result"></div>
@@ -264,20 +271,17 @@
 												</div>
 
 												<div class="col-12 form-group">
-													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Your Full Name:" />
+													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control border-form-control required" placeholder="Nom:" />
 												</div>
 												<div class="col-12 form-group">
-													<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Your Email Address:" />
+													<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control border-form-control" placeholder="Email:" />
 												</div>
+ 
 
 												<div class="col-12 form-group">
-													<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control border-form-control required" placeholder="Your Phone Number:" />
-												</div>
-
-												<div class="col-12 form-group">
-													<button class="button button-rounded btn-block button-large bg-color text-white nott ls0 mx-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Apply It Now</button>
+													<button class="button button-rounded btn-block button-large bg-color text-white nott ls0 mx-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Envoyez</button>
 													<br>
-													<small style="display: block; font-size: 12px; margin-top: 15px; color: #AAA;"><em>We'll do our best to get back to you within 6-8 working hours.</em></small>
+													<small style="display: block; font-size: 12px; margin-top: 15px; color: #AAA;"><em>Merci, nous vous contacterons dans les plus brefs délais. </em></small>
 												</div>
 
 												<div class="col-12 form-group d-none">
@@ -300,6 +304,6 @@
 				</div>
 			</div>
 		</section><!-- #content end -->
-		
+		 
 		@include('incs.footerFront')
 		@endsection
