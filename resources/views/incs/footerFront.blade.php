@@ -39,7 +39,7 @@
 				<div class="container clearfix">
 
 					<div class="row align-items-center justify-content-between">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							Copyrights &copy; 2021 | Ressources Relationnelles projet Nation Communiquante | Le Ministère des solidarités et de la santé<br>
 							<div class="copyright-links"><a href="https://solidarites-sante.gouv.fr/" target="blanc" title="Lien vers la page du Ministère des solidarités et de la santé">Lien vers la page du Ministère</a></div>
 						</div>

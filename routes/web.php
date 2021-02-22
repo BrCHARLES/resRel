@@ -8,6 +8,7 @@ use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RessourceController;
 use App\Http\Controllers\StaticViewsController;
 use App\Http\Controllers\LocalizationController;
  
@@ -29,6 +30,10 @@ use App\Http\Controllers\LocalizationController;
       
     });
  
+    Route::get('/', [RessourceController::class, 'index'])->name('ressources'); 
+
+
+
 //********************************************************//
 //************  Zone d'administration  *******************//
 //********************************************************//

@@ -15,4 +15,9 @@ class Relation extends Model
         'id',
         'relation' 
     ];
+
+    public function ressources()
+    {
+        return $this->belongsToMany('App\Models\Ressource','relations_ressources');
+    }
 }

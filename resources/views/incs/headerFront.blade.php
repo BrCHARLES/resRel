@@ -21,7 +21,7 @@
 									<a href="{{ route('aide', app()->getLocale()) }}" class="st {{ active('aide') }}" title="On vous dit tout sur Ressources Relationnelles">{{ __("Aide")}}</a>
 								</li> 
 								<li class="nav-item">
-									<a href="{{ route('a-propos', app()->getLocale()) }}"  class="st {{ active('a-propos') }}" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
+									<a href="{{ route('ressources', app()->getLocale()) }}"  class="st {{ active('ressources') }}" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
 								</li>
 								<li class="nav-item">
 									<a href="{{ route('contact', app()->getLocale()) }}"  class="st {{ active('contact') }}" title="Contactez un administrateur">{{ __("Contact")}}</a>

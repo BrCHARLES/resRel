@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use App\Models\Color;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Ressource;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Cat extends Model
 {
@@ -24,5 +25,10 @@ class Cat extends Model
 	{
 		return $this->belongsTo(Color::class);
 	}
-   
+
+   public function ressource()
+    {
+      return $this->hasMany(Ressource::class);
+    }
+    
 }
