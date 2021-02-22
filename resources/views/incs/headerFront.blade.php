@@ -46,12 +46,14 @@
                     <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
             
                         <div class="header-misc">
-            
-                            <div class="header-buttons mr-3">
-                                <a href="{{ route('register') }}" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
-                                <a href="{{ route('login') }}" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
-                            </div>
-            
+                            @if (Auth::user())
+                            <span >Bienvenue <?php $user = Auth::user(); echo ucfirst($user->name); ?></span>
+                            @else
+                                <div class="header-buttons mr-3">
+                                    <a href="{{ route('register') }}" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
+                                    <a href="{{ route('login') }}" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
+                                </div>
+                            @endif
                             <!-- Top Search
                             ============================================= -->
                             <div id="top-search" class="header-misc-icon">
