@@ -5,7 +5,7 @@ namespace App\Manager;
 use App\Models\Cat;
 use Illuminate\Http\Request;
 
-class catManager 
+class CatManager 
 {  
     public function build(cat $cat, Request $request)
     {

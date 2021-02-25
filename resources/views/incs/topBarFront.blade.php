@@ -15,6 +15,11 @@
 												<a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
 												@if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
 											</li>
+											{{-- <li class="top-links-item"><a href="en">Anglais</a></li>
+											<li class="top-links-item"><a href="de">Allemand</a></li>
+											<li class="top-links-item"><a href="ar">Arabe</a></li> 
+											<li class="top-links-item"><a href="it">Italien</a></li>
+											<li class="top-links-item"><a href="sp">Espagnol</a></li>  --}}
 										@endforeach
 									</ul>
 								</li>
@@ -29,7 +34,7 @@
 						============================================= -->
 						<div class="top-links">
 							<ul class="top-links-container"> 
-								<li class="top-links-item d-sm-inline-block"><a href="#"><i class="icon-download-alt"></i> {{ __("Télécharger l'application") }}</a></li>
+								<li class="top-links-item d-none d-sm-inline-block"><a href="#"><i class="icon-download-alt"></i> {{ __("Télécharger l'application") }}</a></li>
 							</ul>
 						</div><!-- .top-links end -->
 					</div>
