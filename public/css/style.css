@@ -103,6 +103,10 @@
   .catImg {
 	  width: 40%;
   }
+  .date{
+	  font-size:11px;
+	  color:rgb(107, 103, 103)
+  }
 /* ----------------------------------------------------------------
 	Bootstrap Adjustments
 -----------------------------------------------------------------*/
@@ -13025,13 +13029,11 @@ fieldset[disabled] .sm-form-control {
 
 label {
 	display: inline-block;
-	font-size: 13px;
-	font-weight: 700;
-	font-family: 'Poppins', sans-serif;
+	font-size: 11px;
+	font-weight: 700; 
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #555;
-	margin-bottom: 10px;
+	color: #000; 
 	cursor: pointer;
 }
 

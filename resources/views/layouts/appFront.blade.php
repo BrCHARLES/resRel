@@ -22,6 +22,7 @@
 
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Roboto">
+   @livewireStyles
 </head>
 
 <body class="stretched">
@@ -39,6 +40,7 @@
 	<div id="gotoTop" class="icon-angle-up"></div>
 
 	<!-- JavaScripts ============================================= -->
+  @livewireScripts
 	<script src="{{ asset('js/jquery.js') }}"></script>
 	<script src="{{ asset('js/plugins.min.js') }} "></script>
     <script src="{{ asset('js/bs-datatable.js') }}"></script>

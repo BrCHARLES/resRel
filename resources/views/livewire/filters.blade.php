@@ -18,10 +18,11 @@
                                     @endforeach
                                     <p>
                                         {{ substr($ressource->ressource_description, 0, 150)."..." }}                                      
-                                    </p> 
-                                 <a href="" class="btn btn-primary"><i class="fas fa-arrow-right"></i>
-                                Lire la suite
-                                </a>  
+                                    </p>  
+                                    
+                                    <a href="{{route('ressources',  $ressource->slug ) }}" class="btn btn-primary"><i class="fas fa-arrow-right"></i>
+                                        Lire la suite
+                                    </a>  
                                 
                                 </div>
                             </div>

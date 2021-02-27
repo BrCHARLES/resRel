@@ -62,9 +62,9 @@
 										<div class="col-md-4 form-group">
 											<label for="template-contactform-service">Sujet</label>
 											<select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
-												<option value="">-- Select One --</option>
+												<option value="">-- Choisir--</option>
 												<option value="Wordpress">Information générale</option>
-												<option value="PHP / MySQL">Rensignement à propos d'une ressource</option>
+												<option value="PHP / MySQL">Renseignement à propos d'une ressource</option>
 												<option value="HTML5 / CSS3">Autre</option> 
 											</select>
 										</div>

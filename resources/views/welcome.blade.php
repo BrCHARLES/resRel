@@ -17,7 +17,7 @@
 						<div class="row justify-content-center">
 							<div class="col-md-7">
 								<div class="slider-title mb-3 dark clearfix">
-									<h1><span><strong>{{ __("Ressources Relationnelles est une application du Ministère des solidartés et de la santé pour :")}} </strong> 
+									<h1><span><strong>{{ __("Ressources Relationnelles est une application du Ministère des solidarités et de la santé pour :")}} </strong> 
 											</h1>
 									<h2 class="text-white text-rotater mb-2" data-separator="," data-rotate="fadeIn" data-speed="3500">
 										{{ __("Améliorer ses relations au quotidien")}}<span class="t-rotate text-white">{{ __("avec sa famille")}}, {{ __("avec son/sa conjoint(e)")}}, {{ __("avec ses amis")}}, {{ __("avec des inconnus")}}, {{ __("au travail")}}</span></h2>
@@ -49,10 +49,10 @@
 
 					<div class="border-bottom-0 my-2 center">
 						<h3>{{ __("Qu'est-ce que Ressources Relationnelles ?")}}</h3> 
-							<h4>{{ __("Une application pour mieux communiquer, échanger, s'écouter, se comprendre.")}}</h4> 
+							<h4>{{ __("C'est une application pour mieux communiquer, échanger, s'écouter, se comprendre. Elle nous aide à répondre à ces questions :")}}</h4> 
 							<h5> {{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}<br>
 							{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}}<br>
-							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les domaines relationnels suivants : ")}}
+							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les situations sociales suivantes : ")}}
 						</h5>
 					</div>  
 					<div class="container">

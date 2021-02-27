@@ -27,16 +27,24 @@ use App\Http\Controllers\LocalizationController;
         Route::get('/statiquesPages/a-propos', [StaticViewsController::class, 'apropos'])->name('a-propos');
         Route::get('/statiquesPages/contact', [StaticViewsController::class, 'contact'])->name('contact');
         Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');
-      
+
+
+        Route::get('/ressources', [RessourceController::class, 'index'])->name('ressources');  
+        Route::get(' /ressources/{slug}', [ RessourceController::class, 'show'])->name('ressource');
     });
  
-    Route::get('/', [RessourceController::class, 'index'])->name('ressources'); 
+
 
 
 
 //********************************************************//
 //************  Zone d'administration  *******************//
 //********************************************************//
+//****************  CATEGORIES DE RESSOURCES  ****************//
+
+Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.categories.index');
+Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
+Route::post('/admin/categories/store', [ CatController::class, 'store'])->name('admin.category.store');
 
 //****************  TYPES DE RESSOURCES  ****************//
 
@@ -48,14 +56,12 @@ Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name
 // Route::get('/admin/types/delete/{id}', 'TypeController@destroy' );
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
-//****************  CATEGORIES DE RESSOURCES  ****************//
-
-Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.categories.index');
-Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
-Route::post('/admin/categories/store', [ CatController::class, 'store'])->name('admin.category.store');
-
-
  
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+// restreindre les accés admin.
+// BC
+// 

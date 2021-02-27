@@ -19,9 +19,7 @@
 			<div class="content-wrap">
 				<div class="container clearfix">
 
-					<div class="row gutter-40 col-mb-80">
-						<!-- Post Content
-						============================================= -->
+					<div class="row gutter-40 col-mb-80"> 
 						<div class="postcontent col-lg-12">
 
 							<div id="faqs" class="faqs">
