@@ -21,7 +21,11 @@
 									<a href="{{ route('aide', app()->getLocale()) }}" class="nav-link" title="On vous dit tout sur Ressources Relationnelles">{{ __("Aide")}}</a>
 								</li> 
 								<li class="nav-item">
+<<<<<<< HEAD
 									<a href="{{ route('ressources', app()->getLocale()) }}"  class="nav-link" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
+=======
+									<a href="{{ route('a-propos', app()->getLocale()) }}"  class="nav-link" title="Toutes les ressources relationnelles">{{ __("Les ressources")}}</a>
+>>>>>>> refs/remotes/origin/master
 								</li>
 								<li class="nav-item">
 									<a href="{{ route('contact', app()->getLocale()) }}"  class="nav-link" title="Contactez un administrateur">{{ __("Contact")}}</a>

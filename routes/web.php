@@ -62,6 +62,13 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
+<<<<<<< HEAD
 // restreindre les accés admin.
 // BC
 // 
+=======
+ 
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+>>>>>>> refs/remotes/origin/master
