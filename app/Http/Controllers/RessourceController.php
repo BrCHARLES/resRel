@@ -32,10 +32,16 @@ class RessourceController extends Controller
          ]);
     }
 
-    public function show($slug)
-    {
+     public function show($locale,$slug)
+    { 
         return view('ressource', [
-            'ressource' => Ressource::where('slug', $slug->firstOrFail() )
+            'ressource' => Ressource::where('slug', $slug)->firstOrFail()
         ]);
+        
     }
+        // $slug = Ressource::find($slug); 
+        // dd($slug);
+        // return view('ressource', [app()->getLocale(), 'slug' => $slug
+        // ]);
+    
 }

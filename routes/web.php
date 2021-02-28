@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\WelcomeController; 
 use App\Http\Controllers\RessourceController;
 use App\Http\Controllers\StaticViewsController;
 use App\Http\Controllers\LocalizationController;
@@ -27,20 +26,20 @@ use App\Http\Controllers\LocalizationController;
         Route::get('/statiquesPages/a-propos', [StaticViewsController::class, 'apropos'])->name('a-propos');
         Route::get('/statiquesPages/contact', [StaticViewsController::class, 'contact'])->name('contact');
         Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');
+      //  Route::resource('/ressources', RessourceController::class);
 
-
+    
         Route::get('/ressources', [RessourceController::class, 'index'])->name('ressources');  
-        Route::get(' /ressources/{slug}', [ RessourceController::class, 'show'])->name('ressource');
+       // Route::get(' ressources/{slug}', [ RessourceController::class, 'show'])->name('ressource');
+        
     });
+    Route::get('/{locale}/ressources/{slug}',  [RessourceController::class, 'show'] )  
+        ->name('ressource');
  
+ 
+//************  Zone d'administration  *******************// 
 
-
-
-
-//********************************************************//
-//************  Zone d'administration  *******************//
-//********************************************************//
-//****************  CATEGORIES DE RESSOURCES  ****************//
+//****************  CATEGORIES DE RESSOURCES  ************//
 
 Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.categories.index');
 Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
@@ -62,13 +61,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-<<<<<<< HEAD
-// restreindre les accés admin.
-// BC
-// 
-=======
- 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
->>>>>>> refs/remotes/origin/master
+  

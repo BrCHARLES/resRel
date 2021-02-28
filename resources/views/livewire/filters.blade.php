@@ -19,10 +19,8 @@
                                     <p>
                                         {{ substr($ressource->ressource_description, 0, 150)."..." }}                                      
                                     </p>  
-                                    
-                                    <a href="{{route('ressource',  $ressource->slug ) }}" class="btn btn-primary"><i class="fas fa-arrow-right"></i>
-                                        Lire la suite
-                                    </a>  
+                                   
+                                    <a href="{{ route('ressource',[app()->getLocale(), $ressource->slug]) }}" class="btn btn-primary">Lire la suite</a>  
                                 
                                 </div>
                             </div>
