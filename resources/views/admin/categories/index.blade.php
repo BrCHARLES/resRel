@@ -23,7 +23,7 @@
     <hr>
     <div class="row">
         <div class="col-lg-12 margin-tb"> 
-            <div class="table-responsive">
+            <div>
                 <table id="datatable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>

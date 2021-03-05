@@ -1,5 +1,17 @@
 
 <section id="content">
+
+<div class="row"> 
+    <div class="container">
+        @foreach ($cats as $cat)
+            <div style="display:inline" class="m-5 d-none">
+                display none full width puis @media 991 apparaît
+                <input type="checkbox" wire:model="activeFilters.{{ $cat->id }}" class="custom-control-input" id="{{ $cat->id }}">
+                <label class="custom-control-label" for="{{ $cat->id }}">  {{ $cat->name }}</label> 
+            </div> 
+        @endforeach 
+    </div>
+</div>
 <div class="content-wrap">
     <div class="container clearfix">
         <div class="row gutter-40 col-mb-80"> 
@@ -14,8 +26,8 @@
                                     
                                     <span class="badge badge-info">{{ $ressource->cat->name }}</span> 
                                     @foreach($ressource->relations as $relation) 
-                                    <span class="badge badge-warning">{{ $relation['relation']}} </span>
-                                    @endforeach
+                                        <span class="badge badge-warning">{{ $relation['relation']}} </span>
+                                    @endforeach                                   
                                     <p>
                                         {{ substr($ressource->ressource_description, 0, 150)."..." }}                                      
                                     </p>  

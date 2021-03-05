@@ -9,7 +9,7 @@
     <meta name="keywords" content="@yield('keywords')">
 
     <title>  @yield('title', env('APP_NAME'))</title>
-    <link rel="icon" href="{{ asset('ressources-relationnelles.ico') }}" />
+    <link rel="icon" href="{{ asset('ressourcesRelationnelles.ico') }}" />
 	<!-- Styles============================================= -->	 
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> 

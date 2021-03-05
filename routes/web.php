@@ -25,14 +25,11 @@ use App\Http\Controllers\LocalizationController;
         Route::get('/statiquesPages/aide', [StaticViewsController::class, 'aide'])->name('aide');
         Route::get('/statiquesPages/a-propos', [StaticViewsController::class, 'apropos'])->name('a-propos');
         Route::get('/statiquesPages/contact', [StaticViewsController::class, 'contact'])->name('contact');
-        Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');
-      //  Route::resource('/ressources', RessourceController::class);
-
-    
-        Route::get('/ressources', [RessourceController::class, 'index'])->name('ressources');  
-       // Route::get(' ressources/{slug}', [ RessourceController::class, 'show'])->name('ressource');
-        
+        Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');       
     });
+    
+    Route::get('/{locale}/ressources',  [RessourceController::class, 'index'] )  
+        ->name('ressources');
     Route::get('/{locale}/ressources/{slug}',  [RessourceController::class, 'show'] )  
         ->name('ressource');
  
@@ -54,11 +51,5 @@ Route::get('/admin/types/{id}/edit',[ TypeController::class, 'edit']);
 Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name('admin.type.update'); 
 // Route::get('/admin/types/delete/{id}', 'TypeController@destroy' );
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
-
- 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
 
   

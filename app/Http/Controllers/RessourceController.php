@@ -25,6 +25,7 @@ class RessourceController extends Controller
     {
        
         $ressources->with('relations')->get(); 
+        
         return view('ressources', 
         [ 
             'ressources'    => Ressource::all(),
@@ -34,14 +35,12 @@ class RessourceController extends Controller
 
      public function show($locale,$slug)
     { 
+        
         return view('ressource', [
-            'ressource' => Ressource::where('slug', $slug)->firstOrFail()
+            'ressource' => Ressource::where('slug', $slug)->firstOrFail()             
         ]);
         
     }
-        // $slug = Ressource::find($slug); 
-        // dd($slug);
-        // return view('ressource', [app()->getLocale(), 'slug' => $slug
-        // ]);
+ 
     
 }

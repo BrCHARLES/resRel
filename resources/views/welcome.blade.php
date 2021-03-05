@@ -35,14 +35,12 @@
 				</div>
 			</div>
 		</section> 
-		<!-- Content
-		============================================= -->
+		<!-- Contenu ============================================= -->
 		<section id="content">
 			
 			<div class="content-wrap" style="overflow: visible;">
 
-				<!-- Wave Shape Divider
-				============================================= -->
+				<!-- vagues ============================================= -->
 				<div class="wave-bottom" style="position: absolute; top: -11px; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x; transform: rotate(180deg);"></div>
 
 				<div class="container">
@@ -66,7 +64,7 @@
 					</div>  
 					<hr>
 
-<!-- Categories ============================================= -->
+						<!-- Categories ============================================= -->
 						<div class="heading-block border-bottom-0 mb-5 center">
 							<h3>{{ __("Catégories de relations")}}</h3> 
 						</div>
@@ -91,26 +89,20 @@
 
 				</div>
 
-				<!-- Section Courses
-				============================================= -->
+
+				 
+
+				<!-- Section  ============================================= -->
 				<div class="section topmargin-lg parallax" style="padding: 80px 0 60px; background-image: url('{{ asset('images/icon-pattern.jpg') }}'); background-size: auto; background-repeat: repeat"  data-bottom-top="background-position:0px 100px;" data-top-bottom="background-position:0px -500px;">
-
-					<!-- Wave Shape Divider
-					============================================= -->
+					<!-- Vague ============================================= -->
 					<div class="wave-top" style="position: absolute; top: 0; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x;"></div>
-
 					<div class="container">
-
 						<div class="heading-block border-bottom-0 mb-5 center">
 							<h3>{{ __("Les dernières ressources ajoutées")}} </h3>
 						</div>
-
 						<div class="clear"></div>
-
 						<div class="row mt-2">
-
-							<!-- Course 1
-							============================================= -->
+							<!-- Res 1 ============================================= -->
 							<div class="col-md-4 mb-5">
 								<div class="card course-card hover-effect border-0">
 									<a href="#"><img class="card-img-top" src="{{ asset('images/articles/1.jpg') }}" alt="Card image cap"></a>
@@ -125,7 +117,7 @@
 								</div>
 							</div>
 
-							<!-- Course 2
+							<!-- Res 2
 							============================================= -->
 							<div class="col-md-4 mb-5">
 								<div class="card course-card hover-effect border-0">
@@ -141,7 +133,7 @@
 								</div>
 							</div>
 
-							<!-- Course 3
+							<!-- Res 3
 							============================================= -->
 							<div class="col-md-4 mb-5">
 								<div class="card course-card hover-effect border-0">
@@ -159,8 +151,7 @@
 						</div>
 							  
 				</div> 
-					<!-- Wave Shape Divider - Bottom
-					============================================= -->
+					<!-- Vague ============================================= -->
 					<div class="wave-bottom" style="position: absolute; top: auto; bottom: 0; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x; transform: rotate(180deg);"></div>
 				</div>
 

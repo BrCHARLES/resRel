@@ -10,15 +10,13 @@
             <div class="pull-left my-2"><h1>Voir les types de ressources</h1>
             </div>
         </div>
-    </div>
-    <hr>
+    </div> 
     <div class="mb-2">
         {{-- <button type="button" class="btn btn-info"><a href="{{ url('admin/types/create') }}" ><span style="color: white">Créer un nouveau type de ressource  </span> </a> </button> --}}
-    </div>
-    <hr>
+    </div> 
     <div class="row">
         <div class="col-lg-12 margin-tb"> 
-            <div class="table-responsive">
+            <div>
                 <table id="datatable1" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
                         <tr>

@@ -8,7 +8,7 @@
 						<!-- Top Links ============================================= -->
 						<div class="top-links">
 							<ul class="top-links-container">
-								<li class="top-links-item"><a href="#">{{ __("Langues") }}</a>
+								<li class="top-links-item"><a href="#"><i class="icon-flag"></i>&nbsp; {{ __("Langues") }}</a>
 									<ul class="top-links-sub-menu">
 										@foreach (config('app.available_locales') as $locale)
 											<li class="top-links-item">
