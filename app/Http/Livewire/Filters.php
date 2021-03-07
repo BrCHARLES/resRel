@@ -9,6 +9,8 @@ use App\Models\Relations_ressources;
 
 class Filters extends Component
 {   
+    use WithPagination;
+
     public $activeFilters = [];
     public $cats;
 
@@ -18,11 +20,10 @@ class Filters extends Component
             return $val;
         });
 
-        return view('livewire.filters', [
-         //   'relations' => Relations_ressources::all(),
+        return view('livewire.filters', [ 
            
             'ressources' => empty($this->activeFilters) 
-                ? Ressource::all() 
+                ? Ressource::paginate(8) 
                 : Ressource::whereIn('cat_id', array_keys ($this->activeFilters))
                 ->orderBy('ressource_date')
                 ->get()

@@ -12,8 +12,6 @@
 	</div>
 
 </section>
-@livewire('filters', ['ressources' => $ressources, 'cats' => $cats])
-
-						
+@livewire('filters', ['ressources' => $ressources, 'cats' => $cats]) 
 @include('incs.footerFront')
 @endsection

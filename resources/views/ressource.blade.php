@@ -51,10 +51,10 @@
 					<div class="si-share border-0 d-flex justify-content-between align-items-center">
 						<span>Partager</span>
 						<div>
-							<a href="#" class="social-icon si-borderless si-facebook">
+							<a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }} " class="social-icon si-borderless si-facebook" targer="blank">
 								<i class="icon-facebook"></i>
 								<i class="icon-facebook"></i>
-							</a>
+							</a> 
 							<a href="#" class="social-icon si-borderless si-twitter">
 								<i class="icon-twitter"></i>
 								<i class="icon-twitter"></i>

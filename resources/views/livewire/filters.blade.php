@@ -36,10 +36,11 @@
                                 
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     @endforeach
-                </div> 
+                </div>                 
             </div>
+            
 <!-- Sidebar catégories ============================================= -->
 
             <div class="sidebar col-lg-3 order-sm-2">

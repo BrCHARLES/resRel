@@ -24,11 +24,11 @@ class RessourceController extends Controller
     public function index(Ressource $ressources)
     {
        
-        $ressources->with('relations')->get(); 
-        
+        $ressources->with('relations')->get();   
+
         return view('ressources', 
         [ 
-            'ressources'    => Ressource::all(),
+            'ressources'    => Ressource::paginate(2),
             'cats'          => Cat::all()
          ]);
     }

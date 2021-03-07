@@ -25,7 +25,8 @@ use App\Http\Controllers\LocalizationController;
         Route::get('/statiquesPages/aide', [StaticViewsController::class, 'aide'])->name('aide');
         Route::get('/statiquesPages/a-propos', [StaticViewsController::class, 'apropos'])->name('a-propos');
         Route::get('/statiquesPages/contact', [StaticViewsController::class, 'contact'])->name('contact');
-        Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');       
+        Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');    
+           
     });
     
     Route::get('/{locale}/ressources',  [RessourceController::class, 'index'] )  
