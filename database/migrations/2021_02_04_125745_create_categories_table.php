@@ -16,9 +16,9 @@ class CreateCategoriesTable extends Migration
         Schema::create('cats', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
-            $table->string('icon');
-            $table->int('color_id');
+            $table->string('image')->nullable();
+            $table->string('icon')->nullable();
+            $table->integer('color_id')->nullable();
         });
     }
 

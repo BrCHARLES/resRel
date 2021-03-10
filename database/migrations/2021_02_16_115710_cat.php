@@ -14,11 +14,11 @@ class Cat extends Migration
      
     public function up()
     {
-    	Schema::create('cats', function(Blueprint $table) {
+    	Schema::create('categories', function(Blueprint $table) {
 			$table->increments('id'); 
 			$table->string('name', 80);
-			$table->string('image');
-            $table->string('icon');
+			$table->string('image')->nullable();
+            $table->string('icon')->nullable();
 			$table->integer('color_id')->unsigned();
 			$table->foreign('color_id')
 				  ->references('id')

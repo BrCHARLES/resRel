@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StatsController;
 use App\Http\Controllers\WelcomeController; 
 use App\Http\Controllers\RessourceController;
 use App\Http\Controllers\StaticViewsController;
@@ -42,6 +43,8 @@ Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.c
 Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
 Route::post('/admin/categories/store', [ CatController::class, 'store'])->name('admin.category.store');
 
+Route::get('/admin/statistiques', [ StatsController::class, 'index'])->name('admin.statistiques');
+
 //****************  TYPES DE RESSOURCES  ****************//
 
 Route::get('/admin/types', [ TypeController::class, 'index'])->name('admin.types.index');
@@ -52,4 +55,10 @@ Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name
 // Route::get('/admin/types/delete/{id}', 'TypeController@destroy' );
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
-  
+
+
+
+//****************************Dashboard citoyen connecté */
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

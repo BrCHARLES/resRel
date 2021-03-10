@@ -1,3 +1,3 @@
 <a href="/">
-    <img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="Logo application ressources relationnelles">
+    <img style="max-width:50%;" src="{{ asset('images/logos/logo_white_full_transparency.png') }}" alt="Logo application ressources relationnelles">
 </a>

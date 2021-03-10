@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Cat; 
+use App\Models\Comments;
 use App\Models\Relation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -31,6 +32,10 @@ class Ressource extends Model
     public function cat() 
 	{
 		return $this->belongsTo(Cat::class);
+	}
+    public function comments() 
+	{
+		return $this->hasMany(Comments::class);
 	}
 
     public function relations()

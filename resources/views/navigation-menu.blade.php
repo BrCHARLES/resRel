@@ -11,18 +11,10 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class=" space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="/" :active="request()->routeIs('home')">
-                        {{ __('Accueil') }}
-                    </x-jet-nav-link>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Tableau de bord') }}
+                        {{ __('Dashboard') }}
                     </x-jet-nav-link>
-                    @if (Auth::user()->role == "admin")
-                        <x-jet-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
-                            {{ __('Gérer les ressources') }}
-                        </x-jet-nav-link>
-                    @endif
                 </div>
             </div>
 
@@ -123,7 +115,7 @@
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
@@ -185,7 +177,7 @@
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
                 </form>
 
@@ -222,8 +214,4 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </nav>
-=======
-</nav>
->>>>>>> refs/remotes/origin/master

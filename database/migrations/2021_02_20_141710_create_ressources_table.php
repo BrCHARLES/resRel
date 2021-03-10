@@ -14,13 +14,19 @@ class CreateRessourcesTable extends Migration
     public function up()
     {
         Schema::create('ressources', function (Blueprint $table) {
-            $table->id();
-            $table->integer('cat_id')->unsigned();
-			$table->foreign('cat_id')
-				  ->references('id')
-				  ->on('cats')
-				  ->onDelete('restrict')
-				  ->onUpdate('restrict');
+            $table->increments('id')->unsigned();
+            // $table->integer('cat_id')->unsigned();
+			// $table->foreign('cat_id')
+			// 	  ->references('id')
+			// 	  ->on('categories')
+			// 	  ->onDelete('restrict')
+			// 	  ->onUpdate('restrict');
+            // $table->integer('comment_id')->unsigned();
+			// $table->foreign('comment_id')
+			// 	  ->references('id')
+			// 	  ->on('comments')
+			// 	  ->onDelete('restrict')
+			// 	  ->onUpdate('restrict');
             $table->string('ressource_title');
             $table->date('ressource_date');
             $table->string('ressource_description');
@@ -31,12 +37,12 @@ class CreateRessourcesTable extends Migration
             $table->string('size');
             $table->boolean('active');
             $table->string('lang')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+            // $table->integer('user_id')->unsigned();
+            // $table->foreign('user_id')
+            //     ->references('id')
+            //     ->on('users')
+            //     ->onDelete('restrict')
+            //     ->onUpdate('restrict');
         });
     }
 
