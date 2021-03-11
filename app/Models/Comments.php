@@ -9,12 +9,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Comments extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
+    
     protected $fillable = [
         'nid',
         'user_id',
         'content',
         'comment_status',
+        'date_time',
     ];
 
     public function ressource()
