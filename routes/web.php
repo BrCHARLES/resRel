@@ -11,6 +11,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\RessourceController;
 use App\Http\Controllers\StaticViewsController;
 use App\Http\Controllers\LocalizationController;
+use App\Http\Controllers\StatistiquesController;
  
 
 // View front avec application de la localisation
@@ -56,7 +57,8 @@ Route::put('/admin/types/{id}/update', [ TypeController::class, 'update'])->name
 Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
 
-
+//****************  STATISTIQUES ADMIN  ****************//
+Route::get('/admin/statistiques', [ StatistiquesController::class, 'index'])->name('admin.statistiques');
 
 //****************************Dashboard citoyen connecté */
 Route::get('/dashboard', function () {

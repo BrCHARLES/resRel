@@ -104,32 +104,32 @@ class CreatePermissionTables extends Migration
         $role_visitor = Role::create(['name' => 'visitor']);
 
         //Création des permissions
-        $permission = Permission::create(['name' => 'Lire un article']);
-        $permission = Permission::create(['name' => 'Créer un article']);
-        $permission = Permission::create(['name' => 'Mettre à jour un article']);
-        $permission = Permission::create(['name' => 'Supprimer un article']);
+        $permission = Permission::create(['name' => 'Lire une ressource']);
+        $permission = Permission::create(['name' => 'Créer une ressource']);
+        $permission = Permission::create(['name' => 'Mettre à jour une ressource']);
+        $permission = Permission::create(['name' => 'Supprimer une ressource']);
         
         // Attribution des permissions aux rôles
-        $role_superadmin->givePermissionTo('Lire un article');
-        $role_superadmin->givePermissionTo('Créer un article');
-        $role_superadmin->givePermissionTo('Mettre à jour un article');
-        $role_superadmin->givePermissionTo('Supprimer un article');
+        $role_superadmin->givePermissionTo('Lire une ressource');
+        $role_superadmin->givePermissionTo('Créer une ressource');
+        $role_superadmin->givePermissionTo('Mettre à jour une ressource');
+        $role_superadmin->givePermissionTo('Supprimer une ressource');
         
-        $role_admin->givePermissionTo('Lire un article');
-        $role_admin->givePermissionTo('Créer un article');
-        $role_admin->givePermissionTo('Mettre à jour un article');
-        $role_admin->givePermissionTo('Supprimer un article');
+        $role_admin->givePermissionTo('Lire une ressource');
+        $role_admin->givePermissionTo('Créer une ressource');
+        $role_admin->givePermissionTo('Mettre à jour une ressource');
+        $role_admin->givePermissionTo('Supprimer une ressource');
         
-        $role_moderator->givePermissionTo('Lire un article');
-        $role_moderator->givePermissionTo('Mettre à jour un article');
-        $role_moderator->givePermissionTo('Supprimer un article');
+        $role_moderator->givePermissionTo('Lire une ressource');
+        $role_moderator->givePermissionTo('Mettre à jour une ressource');
+        $role_moderator->givePermissionTo('Supprimer une ressource');
         
-        $role_user->givePermissionTo('Lire un article');
-        $role_user->givePermissionTo('Créer un article');
-        $role_user->givePermissionTo('Mettre à jour un article');
+        $role_user->givePermissionTo('Lire une ressource');
+        $role_user->givePermissionTo('Créer une ressource');
+        $role_user->givePermissionTo('Mettre à jour une ressource');
         
         
-        $role_visitor->givePermissionTo('Lire un article');
+        $role_visitor->givePermissionTo('Lire une ressource');
     }
 
     /**

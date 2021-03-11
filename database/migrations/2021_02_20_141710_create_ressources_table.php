@@ -15,34 +15,17 @@ class CreateRessourcesTable extends Migration
     {
         Schema::create('ressources', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            // $table->integer('cat_id')->unsigned();
-			// $table->foreign('cat_id')
-			// 	  ->references('id')
-			// 	  ->on('categories')
-			// 	  ->onDelete('restrict')
-			// 	  ->onUpdate('restrict');
-            // $table->integer('comment_id')->unsigned();
-			// $table->foreign('comment_id')
-			// 	  ->references('id')
-			// 	  ->on('comments')
-			// 	  ->onDelete('restrict')
-			// 	  ->onUpdate('restrict');
-            $table->string('ressource_title');
-            $table->date('ressource_date');
-            $table->string('ressource_description');
-            $table->string('ressource_image');
-            $table->string('video_url');
-            $table->integer('video_id');
-            $table->string('content_type');
-            $table->string('size');
-            $table->boolean('active');
+            $table->string('ressource_title')->nullable();
+            $table->string('ressource_stitle')->nullable();
+            $table->date('ressource_date')->nullable();
+            $table->text('ressource_description')->nullable();
+            $table->string('ressource_image')->nullable();
+            $table->string('video_url')->nullable();
+            $table->integer('video_id')->nullable();
+            $table->string('content_type')->nullable();
+            $table->string('size')->nullable();
+            $table->boolean('active')->nullable();
             $table->string('lang')->nullable();
-            // $table->integer('user_id')->unsigned();
-            // $table->foreign('user_id')
-            //     ->references('id')
-            //     ->on('users')
-            //     ->onDelete('restrict')
-            //     ->onUpdate('restrict');
         });
     }
 

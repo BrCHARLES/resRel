@@ -15,22 +15,9 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            // $table->integer('comment_id')->unsigned()->nullable();
-            // $table->integer('nid')->unsigned()->nullable();
-			// $table->foreign('nid')
-			// 	  ->references('id')
-			// 	  ->on('ressources')
-			// 	  ->onDelete('restrict')
-			// 	  ->onUpdate('restrict');
-            // $table->integer('user_id')->unsigned();
-			// $table->foreign('user_id')
-			// 	  ->references('id')
-			// 	  ->on('users')
-			// 	  ->onDelete('restrict')
-			// 	  ->onUpdate('restrict');
+            $table->integer('comment_id')->unsigned()->nullable();
+            $table->string('content')->nullable();
             $table->timestamp('date_time')->nullable();
-            // $table->string('content')->nullable();
-            // $table->integer('comment_status')->nullable();
         });
     }
 

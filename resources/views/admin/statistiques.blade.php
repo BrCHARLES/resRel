@@ -2,7 +2,6 @@
 <link href="../css/dashboard.css" rel="stylesheet">
 
 @extends('layouts.appFront')
-@include('incs.topBarFront')
 @include('incs.headerFront') 
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">

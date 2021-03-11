@@ -17,6 +17,7 @@ class Ressource extends Model
     protected $fillable = [ 
         'cat_id',
         'ressource_title',
+        'ressource_stitle',
         'ressource_date',
         'ressource_description',
         'ressource_image',

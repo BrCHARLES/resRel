@@ -26,8 +26,6 @@
 					<div class="col-12 col-md-auto pl-0">
 						<ul id="top-social">
 							<li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-							<li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
-							<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
 							<li><a href="#" class="si-email3"><span class="ts-icon"><i class="icon-envelope-alt"></i></span> </a></li>
 						</ul><!-- #top-social end -->
 					</div>
@@ -58,8 +56,8 @@
 								<li class="nav-item {{ (request()->is('admin/datatable')) ? 'active' : '' }}">
 									<a href="{{ url('admin/datatable') }}"  class="nav-link" title="Gérer les utilisateurs">Utilisateurs</a>
 								</li>
-								<li class="nav-item {{ (request()->is('#')) ? 'active' : '' }}">
-									<a href="{{ url('#') }}"  class="nav-link" title="Contactez un administrateur">Statistiques</a>
+								<li class="nav-item {{ (request()->is('admin.statistiques')) ? 'active' : '' }}">
+									<a href="{{ url('admin/statistiques') }}"  class="nav-link" title="Statistiques">Statistiques</a>
 								</li>
 							</ul>
 						</div>

@@ -41,7 +41,7 @@
                             @if (Auth::user())
                                 <span >Bienvenue <?php $user = Auth::user(); echo ucfirst($user->name); ?></span>
                                 <!-- Authentication -->
-                                <form method="POST" action="{{ route('logout') }}">
+                                <form style="margin-top:30px;" method="POST" action="{{ route('logout') }}">
                                     @csrf
 
                                     <x-jet-dropdown-link href="{{ route('logout') }}"
@@ -68,9 +68,10 @@
                         <div id="primary-menu-trigger">
                             <svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
                         </div>
-            
+
+                        
                         <nav class="primary-menu with-arrows">
-                             <ul class="menu-container">
+                            <ul class="menu-container">
                                 <li class="menu-item"><a class="menu-link" href="#" class="pl-0"><div><i class="icon-line-grid"></i>Catégories de relations</div></a>
                                     <ul class="sub-menu-container">
                                         <li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-line2-user"></i>Teacher Training</div></a>
@@ -88,7 +89,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </nav> 
+                        </nav>
                         <form class="top-search-form" action="search.html" method="get">
                             <input type="text" name="q" class="form-control" value="" placeholder="Rechercher" autocomplete="off">
                         </form>
