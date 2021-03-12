@@ -44,7 +44,7 @@ Route::get('/admin/categories', [ CatController::class, 'index'])->name('admin.c
 Route::get('/admin/categories/create', [ CatController::class, 'create'])->name('admin.categories.create');
 Route::post('/admin/categories/store', [ CatController::class, 'store'])->name('admin.category.store');
 
-Route::get('/admin/statistiques', [ StatsController::class, 'index'])->name('admin.statistiques');
+Route::get('/admin/datatable', [ CatController::class, 'index'])->name('admin.datatable');
 
 //****************  TYPES DE RESSOURCES  ****************//
 
