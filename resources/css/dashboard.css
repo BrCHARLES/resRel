@@ -1,0 +1,39 @@
+
+/* Style du content global */
+.content{
+  background-color: rgba(211,211,211,0.2);
+  height: 100%;
+  width: 100%;
+}
+
+/* Style de la table vue globale */
+.nbrglobal{
+  font-size:20px;
+}
+
+/* Style des tables */
+.tableContainer1{
+  padding-top:3em;
+}
+.tableContainer1,.tableContainer2,.tableContainer3{
+  margin-left:4em;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+
+.master_title_table{
+  background-color:rgb(228,238,245);
+}
+td,th{
+  text-align: center !important;
+  padding:5px;
+}
+tr,td,th{
+  border:1px solid black;
+}
+table{
+  border:3px solid black;
+  box-shadow:3px 3px grey;
+}

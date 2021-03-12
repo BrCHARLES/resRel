@@ -22,7 +22,7 @@ class RessourceSeeder extends Seeder
             'Le rire au travail et l’éthique',
             'Partager des vrais moments de vie de famille',
             'Bienvenue dans une vie sans tabac',
-            'Dans l\'intimité de Kandinsky\r\n\r\n',
+            'Dans l\'intimité de Kandinsky',
             'Masterclass - Jacques Audiard'
         ];
         $ressource_stitle = ['slug1','slug2','slug3','slug4','slug5','slug6','slug7','slug8'];
