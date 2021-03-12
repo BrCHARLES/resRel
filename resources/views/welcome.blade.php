@@ -72,16 +72,17 @@
 					<div class="clear"></div>
 					
 					<div class="row course-categories clearfix mb-4">
-						{{-- //https://laravel-news.com/translation-loader-package --}}
 						@foreach ($cats as $object)
-							<div class="col-lg-2 col-sm-3 col-6 mt-4">
-								<div class="card hover-effect">
-									<img class="card-img" src="/{{ $object->image }}" alt="{{ $object->name }}">
-									<a href="#" class="card-img-overlay rounded p-0" style="background-color: {{ $object->color['rgba'] }};">
-										<span><i class="icon{{ $object->icon }}"></i>  {{ $object->name }}</span>
-									</a>
+							@if($object->active == 1)
+								<div class="col-lg-2 col-sm-3 col-6 mt-4">
+									<div class="card hover-effect">
+										<img class="card-img" src="/{{ $object->image }}" alt="{{ $object->name }}">
+										<a href="{{ route('ressources',[app()->getLocale()]) }}" class="card-img-overlay rounded p-0" style="background-color: {{ $object->color['rgba'] }};">
+											<span><i class="icon{{ $object->icon }}"></i>  {{ $object->name }}</span>
+										</a>
+									</div>
 								</div>
-							</div>
+							@endif
 						@endforeach 
 					</div> 
 

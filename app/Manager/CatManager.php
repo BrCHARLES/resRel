@@ -15,6 +15,7 @@ class CatManager
         $cat->image = $image;
         $cat->icon = $request->get('icon');
         $cat->color_id = $request->get('color_id');
+        $cat->active = $request->get('active');
         $cat->save();
     }
 

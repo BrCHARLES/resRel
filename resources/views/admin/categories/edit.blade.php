@@ -6,7 +6,7 @@
 @include('incs.HeaderBack')
 <section style="padding:30px 0 10px 0; background-color:#999999; border: solid 1px #eee"> 
     <div class="container clearfix">
-        <h4>Créer une catégorie</h4>
+        <h4>Editer une catégorie</h4>
     </div> 
  </section>    
  <div class="container">
@@ -45,6 +45,7 @@
                         <div class="form-group">
                             <label for="icon">Icône</label> 
                                 <div class="input-group-prepend"> 
+                                {{-- <input type="text" id="icon" class="form-control  @error('icon') is-invalid @enderror" name="icon"  value="{{ old('icon') }}" placeholder="Icône"> --}}
                                 <select name="icon" id="icon" class="form-control">  
                                     <option value="-microphone-alt">micro</option>     
                                     <option value="-palette">palette peinture</option>
@@ -77,14 +78,7 @@
                                     @endforeach
                             </select>	 
                         </div> 
-                        <div class="form-group">
-                            <label for="active">Actif</label> 
-                                <div class="input-group-prepend"> 
-                                <select name="active" id="active" class="form-control">  
-                                    <option value="1">Actif</option>  
-                                    <option value="0">Inactif</option>  
-                                </select>
-                        </div> 
+                     
                         <div class="form-group">
                             <button class="btn btn-success">envoyer</button>
                         </div>

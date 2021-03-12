@@ -35,10 +35,10 @@ class CatController extends Controller
      */
     public function create()
     {
+      
         return view('admin.categories.create', [
-            'colors' => Color::all() 
-        ]);
-
+            'colors' => Color::all(), 
+        ]);     
     }
  
     /**
@@ -51,25 +51,10 @@ class CatController extends Controller
     {       
          
         $cat = new cat();
-        $this->catManager->build($cat, $request);
-    //    return redirect()->route('admin.ressource.index')->with('success', "L'ressource a bien été créé !"); 
-    
-
-      //  dd($request->all());
-        // $validated = $request->validated();
-
-        // $image = $request->image->store('images'.'/'.'categories');  
-
-        // Cat::create([
-        //     'name'  => $request->input('name'),
-        //     'image' => $image,
-        //     'icon'  => $request->input('icon'),
-        //     'color' => $request->input('color_id'),
-        // ]);
-
-      //  session()->flash('success', 'Categorie OK');
         
-      return redirect(route('admin.categories.index'))->with('success', 'La catégorie a bien été crée');
+        $this->catManager->build($cat, $request); 
+        
+        return redirect(route('admin.categories.index'))->with('success', 'La catégorie a bien été crée');
         
     }
 
@@ -90,9 +75,10 @@ class CatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
+   
+    public function edit($id){        
+        $cat = Cat::findOrFail($id);
+        return view('admin.categories.edit' , compact('cat'));            
     }
 
     /**
@@ -113,10 +99,25 @@ class CatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+        
+    public function activate($id){
+        $cat = Cat::findOrFail($id); 
+            if($cat->active == 1 ) { 
+                    $cat->active = 0;
+            }else{
+                $cat->active = 1;
+            }
+        $cat->save() ;
+        return redirect('admin/categories');
     }
+
+ public function destroy($id){
+    $cat = Cat::findOrFail($id);
  
+    $cat->delete();
+    return redirect(route('admin.categories.index'))->with('success', 'La catégorie a bien été supprimée');
+
+
+ }
 }
 

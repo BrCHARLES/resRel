@@ -17,7 +17,8 @@ class Cat extends Model
         'name',
         'image',
         'icon',
-        'color_id'
+        'color_id',
+        'active'
     ];
  
 

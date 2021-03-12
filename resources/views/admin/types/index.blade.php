@@ -4,16 +4,12 @@
 @section('content')
 
 @include('incs.HeaderBack') 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left my-2"><h1>Voir les types de ressources</h1>
-            </div>
-        </div>
+<section style="padding:30px 0 10px 0; background-color:#999999; border: solid 1px #eee" class="mb-2"> 
+    <div class="container">
+        <h4>Voir les types de ressources</h4>
     </div> 
-    <div class="mb-2">
-        {{-- <button type="button" class="btn btn-info"><a href="{{ url('admin/types/create') }}" ><span style="color: white">Créer un nouveau type de ressource  </span> </a> </button> --}}
-    </div> 
+ </section> 
+ <div class="container">
     <div class="row">
         <div class="col-lg-12 margin-tb"> 
             <div>
@@ -43,7 +39,7 @@
                     </tr> 
                     @endforeach
                 </table>
-            </div> 
+        </div> 
     </div> 
 </div> 
 @endsection

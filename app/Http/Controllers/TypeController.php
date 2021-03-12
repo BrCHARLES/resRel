@@ -33,17 +33,6 @@ class TypeController extends Controller
         $type = Type::findOrFail($id);
         return view('admin.types.edit' , compact('type'));            
     }
-
-    // Brigitte : attention à la réutilisation fonction update à valider.
-   
-    // public function update($id, Request $request){          
-    //     $type = Type::findOrFail($id);
-    //     $this->validate($request,
-    //     [       'name' => 'required|min:5'
-    //     ]);
-    //     $type->update($request->all()); 
-    //     return redirect('admin/types/index');
-    // }
  
       
     public function activate($id){

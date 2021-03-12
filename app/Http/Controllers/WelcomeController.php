@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\DB;
 class WelcomeController extends Controller
 {
     public function index(){
-        
-        // $users = User::limit(5)->get();
-
-    //    $ressources = Ressource::with(['cats' => function($query) {
-        
-    //         }])->take(5)->get();
-
+         
         return view('welcome' , [ 
             'cats'          => Cat::all(),
             'types'         => Type::all(),

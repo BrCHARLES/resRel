@@ -1,36 +1,18 @@
 
-			<!-- Top Bar
-		============================================= -->
+    <!-- WYSIWIG -->
+    <script src="https://cdn.tiny.cloud/1/7uabbpgwo2xxf7clxrykhtxen8eh2h4upl73dtoa72ar3s7k/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
 		<div id="top-bar" class="bg-color dark">
 			<div class="container clearfix">
-				<div class="row justify-content-between">
-					<div class="col-12 col-md-auto mr-md-auto">
-
-						<!-- Top Links ============================================= -->
-						<div class="top-links">
-						 
-						</div><!-- .top-links end -->
-
-					</div>
-
+				<div class="row justify-content-between"> 
 					<div class="col-12 col-md-auto px-0">
-
-						<!-- Top Links
-						============================================= -->
 						<div class="top-links">
-							<ul class="top-links-container"> 
-								<li class="top-links-item d-none d-sm-inline-block"><a href="#"><i class="icon-download-alt"></i> {{ __("Télécharger l'application") }}</a></li>
-							</ul>
-						</div><!-- .top-links end -->
-					</div>
-					<div class="col-12 col-md-auto pl-0">
-						<ul id="top-social">
-							<li><a href="#" class="si-facebook"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-							<li><a href="#" class="si-twitter"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
-							<li><a href="#" class="si-instagram"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-							<li><a href="#" class="si-email3"><span class="ts-icon"><i class="icon-envelope-alt"></i></span> </a></li>
-						</ul><!-- #top-social end -->
-					</div>
+							<ul class="top-links-container">  
+								<a href="{{ route('welcome',[app()->getLocale() ]) }}" class="btn btn-primary m-3" target="_blank">Voir le site</a>  
+
+ 							</ul>
+						</div> 
+					</div> 
 				</div>
 			</div>
 		</div>
@@ -49,14 +31,18 @@
 						
 						<div class="collapse navbar-collapse align-items-end" id="navbarNav">
 							<ul class="navbar-nav ml-auto">
+								
+								<li class="nav-item {{ (request()->is('admin/res')) ? 'active' : '' }}">
+									<a href="{{ route('admin.res.list') }}" class="nav-link" title="Ressources">Ressources</a>
+								</li>
+								<li class="nav-item {{ (request()->is('admin/categories')) ? 'active' : '' }}">
+									<a href="{{ route('admin.categories.index') }}" class="nav-link" title="Les catégories de ressources">Catégories</a>
+								</li>
 								<li class="nav-item {{ (request()->is('admin/types')) ? 'active' : '' }}">
 									<a href="{{ route('admin.types.index') }}" class="nav-link" title="Les types de ressources">Types de ressources</a>
-								</li>
-								<li class="nav-item {{ (request()->is('admin/types/create')) ? 'active' : '' }}">
-									<a href="{{ url('admin/types/create') }}" class="nav-link" title="Créer une ressource">Créer une ressource</a>
-								</li>
+								</li> 
 								<li class="nav-item {{ (request()->is('admin/datatable')) ? 'active' : '' }}">
-									<a href="{{ url('admin/datatable') }}"  class="nav-link" title="Gérer les utilisateurs">Utilisateurs</a>
+									<a href="{{ url('#') }}"  class="nav-link" title="Gérer les utilisateurs">Utilisateurs</a>
 								</li>
 								<li class="nav-item {{ (request()->is('#')) ? 'active' : '' }}">
 									<a href="{{ url('#') }}"  class="nav-link" title="Contactez un administrateur">Statistiques</a>

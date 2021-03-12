@@ -28,16 +28,16 @@ class RessourceController extends Controller
 
         return view('ressources', 
         [ 
-            'ressources'    => Ressource::paginate(2),
+            'ressources'    => Ressource::all(),
             'cats'          => Cat::all()
          ]);
     }
 
-     public function show($locale,$slug)
+     public function show($locale,$id)
     { 
         
         return view('ressource', [
-            'ressource' => Ressource::where('slug', $slug)->firstOrFail()             
+            'ressource' => Ressource::where('id', $id)->firstOrFail()             
         ]);
         
     }

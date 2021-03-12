@@ -52,7 +52,7 @@
             
                         <nav class="primary-menu with-arrows">
                              <ul class="menu-container">
-                                <li class="menu-item"><a class="menu-link" href="#" class="pl-0"><div><i class="icon-line-grid"></i>Catégories de relations</div></a>
+                                <li class="menu-item"><a class="menu-link" href="#" class="pl-0"><div><i class="icon-line-grid"></i>Ressources relationnelles comment ça marche ?</div></a>
                                     <ul class="sub-menu-container">
                                         <li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-line2-user"></i>Teacher Training</div></a>
                                             <ul class="sub-menu-container">
@@ -61,9 +61,6 @@
                                                         <li class="menu-item"><a class="menu-link" href="#"><div>Level 3</div></a></li>
                                                     </ul>
                                                 </li>
-                                                <li class="menu-item"><a class="" href="#"><div>Types de relations</div></a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#"><div>Teaching Tools</div></a></li>
-                                                <li class="menu-item"><a class="menu-link" href="#"><div>Others</div></a></li>
                                             </ul>
                                         </li>
                                     </ul>

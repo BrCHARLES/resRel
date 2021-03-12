@@ -55,14 +55,7 @@
 								<i class="icon-facebook"></i>
 								<i class="icon-facebook"></i>
 							</a> 
-							<a href="#" class="social-icon si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a> 
-							<a href="#" class="social-icon si-borderless si-email3">
-								<i class="icon-email3"></i>
-								<i class="icon-email3"></i>
-							</a>
+							 
 						</div>
 					</div>
 				</div> 

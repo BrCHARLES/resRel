@@ -43,7 +43,7 @@
   @livewireScripts
 	<script src="{{ asset('js/jquery.js') }}"></script>
 	<script src="{{ asset('js/plugins.min.js') }} "></script>
-    <script src="{{ asset('js/bs-datatable.js') }}"></script>
+  <script src="{{ asset('js/bs-datatable.js') }}"></script>
 	<!-- Footer Scripts ============================================= -->
 	<script src="{{ asset('js/functions.js') }} "></script>
 
