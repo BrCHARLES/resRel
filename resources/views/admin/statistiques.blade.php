@@ -8,6 +8,8 @@
   </div>
 </main>
 <section class="content">
+  <button><a href="{{ route('admin.export.users') }}">Exporter les utilisateurs en excel</a></button>
+  <button><a href="{{ route('admin.export.total') }}">Export total des données en excel</a></button>
   <div class="tableContainer1"class="d-flex">
     <table>
         <thead>

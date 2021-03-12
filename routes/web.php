@@ -59,6 +59,9 @@ Route::get('/admin/types/activate/{id}', [ TypeController::class, 'activate']);
 
 //****************  STATISTIQUES ADMIN  ****************//
 Route::get('/admin/statistiques', [ StatistiquesController::class, 'index'])->name('admin.statistiques');
+Route::get('/admin/statistiques/export/users', [ StatistiquesController::class, 'exportUsers'])->name('admin.export.users');
+Route::get('/admin/statistiques/export/total', [ StatistiquesController::class, 'exportTotal'])->name('admin.export.total');
+Route::get('/admin/statistiques/import', [ StatistiquesController::class, 'import'])->name('admin.import');
 
 //****************************Dashboard citoyen connecté */
 Route::get('/dashboard', function () {
