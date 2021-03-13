@@ -37,40 +37,30 @@
 		</section> 
 		<!-- Contenu ============================================= -->
 		<section id="content">
-			
 			<div class="content-wrap" style="overflow: visible;">
-
 				<!-- vagues ============================================= -->
 				<div class="wave-bottom" style="position: absolute; top: -11px; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x; transform: rotate(180deg);"></div>
 
 				<div class="container">
 
-					<div class="border-bottom-0 my-2 center">
+					<div class="border-bottom-0 my-2">
 						<h3>{{ __("Qu'est-ce que Ressources Relationnelles ?")}}</h3> 
-							<h4>{{ __("C'est une application pour mieux communiquer, échanger, s'écouter, se comprendre. Elle nous aide à répondre à ces questions :")}}</h4> 
+							<h4>{{ __("C'est une application pour mieux communiquer, échanger, s'écouter, se comprendre.") }}
+							<br>{{ __("Elle nous aide à répondre à ces questions :")}}</h4> 
 							<h5> {{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}<br>
 							{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}}<br>
 							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les situations sociales suivantes : ")}}
 						</h5>
 					</div>  
-					<div class="container">
-						<div class="row course-categories clearfix mb-4">
-						@foreach ($relations as $rel)
-						<div class="col-lg-2 col-sm-3 col-6 mt-4">
-							<h4 style="inline"><a href="#">{{ $rel->relation }}</a> </h4>
-						</div>
-						@endforeach 
-						</div>
-					</div>  
+					 
 					<hr>
 
 						<!-- Categories ============================================= -->
 						<div class="heading-block border-bottom-0 mb-5 center">
 							<h3>{{ __("Catégories de relations")}}</h3> 
-						</div>
-						 
+						</div> 
 					<div class="clear"></div>
-					
+					 
 					<div class="row course-categories clearfix mb-4">
 						@foreach ($cats as $object)
 							@if($object->active == 1)
@@ -85,13 +75,9 @@
 							@endif
 						@endforeach 
 					</div> 
-
 					<div class="clear"></div>
-
 				</div>
-
-
-				 
+			</div>
 
 				<!-- Section  ============================================= -->
 				<div class="section topmargin-lg parallax" style="padding: 80px 0 60px; background-image: url('{{ asset('images/icon-pattern.jpg') }}'); background-size: auto; background-repeat: repeat"  data-bottom-top="background-position:0px 100px;" data-top-bottom="background-position:0px -500px;">
@@ -103,52 +89,41 @@
 						</div>
 						<div class="clear"></div>
 						<div class="row mt-2">
-							<!-- Res 1 ============================================= -->
-							<div class="col-md-4 mb-5">
-								<div class="card course-card hover-effect border-0">
-									<a href="#"><img class="card-img-top" src="{{ asset('images/articles/1.jpg') }}" alt="Card image cap"></a>
-									<div class="card-body">
-										<h4 class="card-title font-weight-bold mb-2"><a href="#">Partager une passion</a></h4>
-										<p class="mb-2 card-title-sub text-uppercase font-weight-normal ls1"><a href="#" class="text-black-50">loisir</a></p>
-										<div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i> <span>4.7</span></div>
-								 	</div>
-									<div class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted"> 
-										<a href="#" class="text-dark position-relative"><i class="icon-line2-user"></i> </a>
+							<!-- Ressources ============================================= -->
+							@foreach ($ressources as $res)
+								<div class="col-md-4 mb-5">
+									<div class="card course-card hover-effect border-0">
+											@if($res->ressource_image) 
+												<td><img class="card-img-top" src="/{{ $res->ressource_image }}" alt="{{ $res->ressource_title }}"></td> 
+											@else
+												<td><img class="card-img-top" src="{{ $res->cat['image'] }}" alt="{{ $res->ressource_title }}"></td> 
+											@endif
+												<div class="card-body"> 
+													<h4 class="card-title font-weight-bold mb-2">
+														<a href="{{ route('ressource',[app()->getLocale(), $res->id]) }}">
+															 {{ $res->ressource_title }} 
+														</a>
+													</h4>
+													<p class="mb-2 card-title-sub text-uppercase font-weight-normal ls1">
+														<a href="#" class="text-black-50"> {{ $res->cat['name'] }} </a>
+														- {{ $res->ressource_date->format('d.m.Y') }}
+													</p>
+													<div class="rating-stars mb-2">	
+														<i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i> 
+															<span>4.7</span>
+													</div>
+												</div>
+												<div class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted"> 
+													<i class="icon-user"></i> 
+														@if( $res->user )
+															{{ $res->user->name }} 
+														@else
+														Equipe Ressources Relationnelle
+														@endif  
+												</div> 
 									</div>
-								</div>
-							</div>
-
-							<!-- Res 2
-							============================================= -->
-							<div class="col-md-4 mb-5">
-								<div class="card course-card hover-effect border-0">
-									<a href="#"><img class="card-img-top" src="{{ asset('images/articles/2.jpg') }}" alt="Card image cap"></a>
-									<div class="card-body">
-										<h4 class="card-title font-weight-bold mb-2"><a href="#">Sataniste et alors ?</a></h4>
-										<p class="mb-2 card-title-sub text-uppercase font-weight-normal ls1"><a href="#" class="text-black-50">Spiritualité</a></p>
-										<div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i> <span>4.7</span></div>
-							 		</div>
-									<div class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted"> 
-										<a href="#" class="text-dark position-relative"><i class="icon-line2-user"></i ></a>
-									</div>
-								</div>
-							</div>
-
-							<!-- Res 3
-							============================================= -->
-							<div class="col-md-4 mb-5">
-								<div class="card course-card hover-effect border-0">
-									<a href="#"><img class="card-img-top" src="{{ asset('images/articles/3.jpg') }}" alt="Card image cap"></a>
-									<div class="card-body">
-										<h4 class="card-title font-weight-bold mb-2"><a href="#">Garder du lien pendant le Covid</a></h4>
-										<p class="mb-2 card-title-sub text-uppercase font-weight-normal ls1"><a href="#" class="text-black-50">Spiritualité</a></p>
-										<div class="rating-stars mb-2"><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star3"></i><i class="icon-star-half-full"></i> <span>4.7</span></div>
-									 	</div>
-									<div class="card-footer py-3 d-flex justify-content-between align-items-center bg-white text-muted"> 
-										<a href="#" class="text-dark position-relative"><i class="icon-line2-user"></i> </a>
-									</div>
-								</div>
-							</div>
+								</div> 
+							@endforeach 
 						</div>
 							  
 				</div> 
@@ -158,7 +133,7 @@
 
 			 
 
-				<!-- Featues Section
+				<!-- 
 				============================================= -->
 				<div class="section mt-5 mb-0" style="padding: 120px 0; background-image: url('{{ asset('images/icon-pattern-bg.jpg') }}'); background-size: auto; background-repeat: repeat">
 
@@ -221,8 +196,7 @@
 										</div>
 									</div>
 
-									<!-- Feature - 4
-									============================================= -->
+									<!-- Feature - 4 ============================================= -->
 									<div class="col-md-6">
 										<div class="feature-box media-box bottommargin">
 											<div class="fbox-icon">
@@ -243,19 +217,14 @@
 								</div>
 							</div>
 
-							<!-- Registration Foem
-							============================================= -->
+							<!-- Form ============================================= -->
 							<div class="col-lg-4">
-
 								<div class="card shadow" data-animate="shake" style="opacity: 1 !important">
 									<div class="card-body"> 
 										<h4 class="card-title ls-1 mt-4 font-weight-bold h5">Contact flash </h4>
-
 										<div class="form-widget">
 											<div class="form-result"></div>
-
 											<form class="row mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
-
 												<div class="form-process">
 													<div class="css3-spinner">
 														<div class="css3-spinner-scaler"></div>
@@ -292,7 +261,6 @@
 						</div>
 					</div>
 					<!-- Wave Shape ============================================= -->
-					<div class="wave-bottom" style="position: absolute; top: auto; bottom: 0; left: 0; width: 100%; background-image: url('{{ asset('images/wave.svg') }}'); height: 12px; z-index: 2; background-repeat: repeat-x; transform: rotate(180deg);"></div>
 				</div>
 			</div>
 		</section><!-- #content end -->

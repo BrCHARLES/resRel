@@ -14,6 +14,7 @@ use App\Http\Requests\CatsRequest;
 class CatController extends Controller
 {
 
+    
     private $catManager;
 
     public function __construct(catManager $catManager) 

@@ -23,7 +23,7 @@ class Filters extends Component
         return view('livewire.filters', [ 
            
             'ressources' => empty($this->activeFilters) 
-                ? Ressource::paginate(8) 
+                ? Ressource::paginate(15) 
                 : Ressource::whereIn('cat_id', array_keys ($this->activeFilters))
                 ->orderBy('ressource_date')
                 ->get()

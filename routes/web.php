@@ -28,13 +28,13 @@ use App\Http\Controllers\AdminResController;
         Route::get('/statiquesPages/contact', [StaticViewsController::class, 'contact'])->name('contact');
         Route::get('/statiquesPages/faq', [StaticViewsController::class, 'faq'])->name('faq');    
            
-    });
-    
+    }); 
+
     Route::get('/{locale}/ressources',  [RessourceController::class, 'index'] )  
         ->name('ressources');
     Route::get('/{locale}/ressources/{id}',  [RessourceController::class, 'show'] )  
         ->name('ressource');
- 
+  
  
 //************  Zone d'administration  *******************// 
 
