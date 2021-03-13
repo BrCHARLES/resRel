@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColCategoryTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class AddColCategoryTable extends Migration
      */
     public function up()
     {
-        Schema::table('categories', function (Blueprint $table) {
-            $table->foreignId('color_id')->constrained('colors') 
-            ->onDelete('restrict')
-            ->onUpdate('restrict');
-            
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
+            $table->integer('comment_id')->unsigned()->nullable();
+            $table->text('content')->nullable();
+            $table->timestamp('date_time')->nullable();
         });
     }
 
@@ -28,6 +28,6 @@ class AddColCategoryTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('comments');
     }
 }

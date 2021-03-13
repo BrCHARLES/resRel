@@ -52,8 +52,8 @@
 				<div class="header-row">
 					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
 						<div id="logo">
-							<a href="{{ route('welcome', app()->getLocale()) }}" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
-							<a href="" class="retina-logo"><img src="{{ asset('images/logo-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
+							<a href="{{ route('welcome', app()->getLocale()) }}" class="standard-logo"><img src="{{ asset('images/logos/logo_white_full_transparency.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
+							<a href="" class="retina-logo"><img src="{{ asset('images/logos/logo_white_full_transparency.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
                         </div>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-line-menu"></span>

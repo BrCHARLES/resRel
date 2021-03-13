@@ -23,7 +23,7 @@
 					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
 						<div>
 					    	<span style="titleDasboard">DASHBOARD RESSOURCES RELATIONNELLES ADMIN</span><br/>
-							<a href=" ">
+							<a href="{{route('dashboard')}}">Retour à mon compte</a>
                         </div>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-line-menu"></span>
@@ -42,10 +42,10 @@
 									<a href="{{ route('admin.types.index') }}" class="nav-link" title="Les types de ressources">Types de ressources</a>
 								</li> 
 								<li class="nav-item {{ (request()->is('admin/datatable')) ? 'active' : '' }}">
-									<a href="{{ url('#') }}"  class="nav-link" title="Gérer les utilisateurs">Utilisateurs</a>
+									<a href="{{ route('admin.datatable') }}"  class="nav-link" title="Gérer les utilisateurs">Catégories de ressources</a>
 								</li>
-								<li class="nav-item {{ (request()->is('#')) ? 'active' : '' }}">
-									<a href="{{ url('#') }}"  class="nav-link" title="Contactez un administrateur">Statistiques</a>
+								<li class="nav-item {{ (request()->is('admin.statistiques')) ? 'active' : '' }}">
+									<a href="{{ url('admin/statistiques') }}"  class="nav-link" title="Statistiques">Statistiques</a>
 								</li>
 							</ul>
 						</div>

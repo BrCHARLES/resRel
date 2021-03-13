@@ -12,7 +12,8 @@ class Color extends Model
     
     use HasFactory;
     
-    protected $fillable = [ 
+    protected $fillable = [
+        'color_id',
         'color',
         'rgba' 
     ];

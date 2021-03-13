@@ -5,25 +5,29 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('welcome', app()->getLocale()) }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class=" space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="/" :active="request()->routeIs('home')">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('welcome', app()->getLocale()) }}" :active="request()->routeIs('welcome')">
                         {{ __('Accueil') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Tableau de bord') }}
-                    </x-jet-nav-link>
-                    @if (Auth::user()->role == "admin")
-                        <x-jet-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
-                            {{ __('Gérer les ressources') }}
-                        </x-jet-nav-link>
-                    @endif
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Mon compte') }}
+                    </x-jet-nav-link>
+                </div>
+                @if (Auth::user()->role == 'admin')
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('admin.types.index') }}" :active="request()->routeIs('admin.types.index')">
+                            {{ __('Admin panel') }}
+                        </x-jet-nav-link>
+                    </div>
+                @endif
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -123,7 +127,7 @@
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>
@@ -185,7 +189,7 @@
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
                 </form>
 
@@ -222,8 +226,4 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </nav>
-=======
-</nav>
->>>>>>> refs/remotes/origin/master

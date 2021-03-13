@@ -3,8 +3,8 @@
 				<div class="header-row">
 					<nav class="navbar navbar-expand-lg p-0 my-4 w-100">
 						<div id="logo">
-							<a href="{{ route('welcome', app()->getLocale()) }}" class="standard-logo"><img src="{{ asset('images/logoApplication-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
-							<a href="" class="retina-logo"><img src="{{ asset('images/logo-ressources-relationnelles.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
+							<a href="{{ route('welcome', app()->getLocale()) }}" class="standard-logo"><img src="{{ asset('images/logos/logo_white_full_transparency.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
+							<a href="" class="retina-logo"><img src="{{ asset('images/logos/logo_white_full_transparency.png') }}" alt="{{ __("Logo Ressources Relationnelles") }}"></a>
                         </div>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-line-menu"></span>
@@ -22,7 +22,12 @@
 								</li>
 								<li class="nav-item">
 									<a href="{{ route('contact', app()->getLocale()) }}"  class=" st {{ active('contact') }}" title="Contactez un administrateur">{{ __("Contact")}}</a>
-								</li> 
+								</li>
+                                @if (Auth::user())
+                                    <li class="nav-item">
+                                        <a href="{{ route('dashboard') }}" class=" st {{ active('mon_compte') }}">Mon compte</a>
+                                    </li>
+                                @endif
 							</ul>
 						</div>
 					</nav>
@@ -33,10 +38,24 @@
                     <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
             
                         <div class="header-misc">  
+                            @if (Auth::user())
+                                <span >Bienvenue <?php $user = Auth::user(); echo ucfirst($user->name); ?></span>
+                                <!-- Authentication -->
+                                <form style="margin-top:30px;" method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-jet-dropdown-link href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                        {{ __('Logout') }}
+                                    </x-jet-dropdown-link>
+                                </form>
+                            @else
                                 <div class="header-buttons mr-3">
-                                    <a href="" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
-                                    <a href="" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
-                                </div> 
+                                    <a href="{{ route('register') }}" class="button button-rounded button-border button-small m-0">S'enregistrer</a>
+                                    <a href="{{ route('login') }}" class="button button-rounded button-small m-0 ml-2">S'identifier</a>
+                                </div>
+                            @endif
                             <!-- Top Recherche  ============================================= -->
                             <div id="top-search" class="header-misc-icon">
                                 <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
