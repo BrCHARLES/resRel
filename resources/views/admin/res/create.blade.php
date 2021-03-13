@@ -30,7 +30,6 @@
                                     </span>
                                 @enderror
                         </div>
-
                         <div class="form-group">
                             <label for="ressource_stitre">Sous titre</label>
                             <input type="text" class="form-control @error('ressource_stitre') is-invalid @enderror" name="ressource_stitre" id="ressource_stitre" value="{{ old('ressource_stitre') }}" placeholder="Sous titre">
@@ -42,9 +41,9 @@
                         </div>
                         <div class="form-group">
                             <label for="ressource_description">Contenu</label>
-                            <textarea name="content" class="form-control w-100 @error('ressource_description') is-invalid @enderror" name="ressource_description" id="description-editor" cols="30" rows="9"
+                            <textarea name="ressource_description" class="form-control w-100 @error('ressource_description') is-invalid @enderror" name="ressource_description" id="description-editor" cols="30" rows="9"
                             placeholder="Contenu"></textarea>
-                            @error('content')
+                            @error('ressource_description')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -57,14 +56,8 @@
                         </script>
 
                         <div class="form-group">
-                            <label for="ressource_image">Image</label>
-                            <input type="file" class="form-control-file" id="ressource_image" name="ressource_image"  value="{{ old('ressource_image') }}" >
-                            <br>
-                                @error('ressource_image')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <label for="ressource_image">Image</label> 
+                            <input type="file" class="form-control-file" id="ressource_image" name="ressource_image"  value="{{ old('ressource_image') }}" >                               
                         </div>
                         <div class="form-group">
                             <label for="video_url">URL vidéo</label>
@@ -106,6 +99,14 @@
                                         </option>
                                     @endforeach
                             </select>	 
+                        </div> 
+                        <div class="form-group">
+                            <div>
+                                @foreach($rels as $rel) 
+                                <input type="radio" id="louie" name="{{ $rel->id }}" value="{{ $rel->id }}">
+                                    <label for="{{ $rel->id }}">{{ $rel->relation }}</label>
+                                @endforeach
+                              </div>
                         </div> 
                         <div class="form-group">
                             <button class="btn btn-success">envoyer</button>

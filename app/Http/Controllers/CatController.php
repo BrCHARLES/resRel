@@ -7,7 +7,7 @@ use App\Models\Color;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Manager\catManager;
+use App\Manager\CatManager;
 use App\Http\Requests\CatsRequest; 
 
 

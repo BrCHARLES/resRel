@@ -49,7 +49,7 @@
 							<br>{{ __("Elle nous aide à répondre à ces questions :")}}</h4> 
 							<h5> {{ __("Comment adapter notre communication dans des situations sociales différentes ?")}}<br>
 							{{ __("Comment améliorer nos échanges pour fonder des relations coopératives et efficaces ?")}}<br>
-							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les situations sociales suivantes : ")}}
+							{{ __("Ressources Relationnelles nous aide à faire le point renforcer et enrichir nos relations, dans les situations sociales les plus courantes.")}}
 						</h5>
 					</div>  
 					 

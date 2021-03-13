@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CatManager 
 {  
-    public function build(cat $cat, Request $request)
+    public function build(Cat $cat, Request $request)
     {
         $image = $request->image->store('images'.'/'.'categories');
 

@@ -37,11 +37,15 @@
                                                 <span class="badge" style="background-color: {{ $ressource->cat->color->rgba }}">{{ $ressource->cat->name }}</span> 
                                                     @foreach($ressource->relations as $relation) 
                                                         <span class="badge badge-warning">{{ $relation['relation']}} </span>
-                                                    @endforeach                                   
-                                                <p style="font-size:14px; margin:10px">
-                                                    {{ substr($ressource->ressource_description, 0, 100)."..." }}                                      
-                                                </p>   
-                                                <a href="{{ route('ressource',[app()->getLocale(), $ressource->id]) }}" class="btn btn-primary">Lire la suite</a>  
+                                                    @endforeach     
+                                                <p>
+                                                    <p>{{ $ressource->ressource_stitre }}</p>                              
+                                                {{-- <p style="font-size:14px; margin:10px">
+                                                    {!! substr($ressource->ressource_description, 0, 100)."..." !!}                                      
+                                                </p>  --}}
+                                                <p>  
+                                                <a href="{{ route('ressource',[app()->getLocale(), $ressource->id]) }}" class="btn btn-primary">Lire la suite</a>
+                                                </p>  
                                         </div>
                                     </div>
                                 </div> 

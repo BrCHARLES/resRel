@@ -35,8 +35,7 @@
                             <td>Image</td>
                             <td>Icône</td>
                             <td>Couleur overlay</td> 
-                            <td>Actif</td>
-                            <td>Editer</td>   
+                            <td>Actif</td> 
                             <td>delete</td>
                         </tr>
                     </thead>
@@ -55,17 +54,14 @@
                                     <i class="icon-remove" style="color:red" title="Activer la catégorie"></i>
                                 @endif
                             </a> 
-                        </td>
-                        <td>                             
-                            <a href="{{ url('admin/categories/' . $cat->id) . '/edit' }}">editer </a>
-                        </td>  
+                        </td> 
                         <td>
 
                             <form method="POST" action="{{ route('admin.category.delete', [ 'id'=> $cat->id ]) }}">
                                 @csrf
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-danger btn-icon">
-                                  <i data-feather="delete"></i>
+                                <button type="submit" class="btn">
+                                    <i class="icon-remove" style="color:red"></i>
                                 </button>
                               </form>
                         </td>

@@ -77,7 +77,6 @@
                             <td>
                                 <a href="{{ route('admin.res.res',  $ressource->id) }}">Voir</a>  
 
-                                {{-- <a href="{{ route('ressource',[app()->getLocale(), $ressource->id]) }}" target="_blank">Voir</a>   --}}
                             </td>
                         </tr> 
                         @endforeach

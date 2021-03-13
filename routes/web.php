@@ -44,7 +44,7 @@ Route::get('/admin/res', [ AdminResController::class, 'list'])->name('admin.res.
 Route::get('/admin/res/create',  [ AdminResController::class, 'create'])->name('admin.res.create'); 
 
 Route::get('/admin/res/{id}', [ AdminResController::class, 'show'])->name('admin.res.res');
-Route::post('/admin/res/edit/{id}', [ AdminResController::class, 'store'])->name('admin.res.edit');
+Route::post('/admin/res/edit/{id}', [ AdminResController::class, 'edit'])->name('admin.res.edit');
 Route::post('/admin/res/store', [ AdminResController::class, 'store'])->name('admin.res.store');
 Route::get('/admin/res/activate/{id}', [ AdminResController::class, 'activate']);
 
