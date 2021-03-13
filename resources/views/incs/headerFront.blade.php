@@ -50,23 +50,24 @@
                             <svg class="svg-trigger" viewBox="0 0 100 100"><path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path><path d="m 30,50 h 40"></path><path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path></svg>
                         </div>
             
+
                         <nav class="primary-menu with-arrows">
-                             <ul class="menu-container">
-                                <li class="menu-item"><a class="menu-link" href="#" class="pl-0"><div><i class="icon-line-grid"></i>Ressources relationnelles comment ça marche ?</div></a>
-                                    <ul class="sub-menu-container">
-                                        <li class="menu-item"><a class="menu-link" href="#"><div><i class="icon-line2-user"></i>Teacher Training</div></a>
-                                            <ul class="sub-menu-container">
-                                                <li class="menu-item"><a class="menu-link" href="#"><div>All Teacher Training</div></a>
-                                                    <ul class="sub-menu-container">
-                                                        <li class="menu-item"><a class="menu-link" href="#"><div>Level 3</div></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav> 
+                            <ul class="menu-container">
+                               <li class="menu-item"><a class="menu-link" href="#" class="pl-0"><div><i class="icon-line-grid"></i>Ressources relationnelles mode d'emploi</div></a>
+                                   <ul class="sub-menu-container">
+                                       <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-1"><div>Qu'est-ce que c'est ?</div></a></li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-2"><div>Comment ça marche ?</div></a> </li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-3"><div>Amémiorer ma communication</div></a> </li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-4"><div>Faire des rencontres ?</div></a></li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-5"><div>Application mobilie</div></a> </li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-6"><div>Utiliser l'application mobile</div></a> </li>
+                                        <li class="menu-item"><a class="menu-link" href="{{ route('aide',[app()->getLocale()]) }}#faq-7"><div>Proposer une ressource</div></a> </li>
+
+                                   </ul>
+                               </li>
+                           </ul>
+                       </nav>  
+ 
                         <form class="top-search-form" action="search.html" method="get">
                             <input type="text" name="q" class="form-control" value="" placeholder="Rechercher" autocomplete="off">
                         </form>
